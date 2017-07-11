@@ -1,0 +1,167 @@
+$blue:#312782;
+$pink:#e6007e;
+
+
+.clever__green__block {
+		display: block;
+		margin: 40px 0;
+		padding: 40px 40px;
+		background:#a3c732;
+		font-size: 18px !important;
+		color: #fff !important;
+		font-weight: 700 !important;
+	}
+
+	.clever__flex {
+  		display: flex;
+  		align-items: center;
+  		margin-bottom: 50px;
+	}
+
+	.clever__flex--left {
+		margin-right:40px;
+	}
+
+	.clever__flex--right {
+		max-width: 450px;
+	}
+
+	.clever__flex--left img {
+		width: 160px;
+		max-width: none !important;
+	}
+	.clever__flex--title {
+		font-size: 1.4em;
+		font-weight: 700;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		display: block;
+	}
+
+	.clever__flex--p {
+		padding: 20px 0;
+	}
+
+	.clever__flex--link {
+		display: block;
+		width: 100px;
+		padding: 10px 20px;
+		text-align:center;
+		color:#fff !important;
+		text-decoration: none !important;
+		background:#5d7b00;
+		border-radius: 5px;
+		font-size: 16px !important;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.clever__flex--button {
+		display: block;
+		padding: 25px 20px;
+		text-align:center;
+		color:#fff !important;
+		text-decoration: none !important;
+		background:#a3c732;
+		border-radius: 5px;
+		font-size: 16px !important;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.clever__flex--link:hover  {
+		color:#fff !important;
+		text-decoration: none !important;
+	}
+
+	.page__clever p {
+		font-size:14px !important;
+	}
+
+	.clever__book {
+		margin-bottom: 100px;
+	}
+
+	@media screen and (max-width: 420px) {
+		.clever__flex {
+			flex-direction:column;
+			justify-content: center;
+
+			-webkit-flex-direction:column;
+			-webkit-justify-content: center;
+			text-align: center;
+		}
+		.clever__flex--left {
+			margin-right:0px;
+			margin-bottom: 20px;
+		}
+		.clever__flex--link {
+			width: 100%;
+		}
+	}
+
+.clever {
+	&__testimonials {
+		&__item {
+			padding: 40px;
+			margin-bottom: 20px;
+			color: white;
+			text-align: center;
+			&:nth-child(odd) {
+				background: $pink;
+			}
+			&:nth-child(even) {
+				background: $blue;
+			}
+			img {
+				width:45px;
+			}
+		}
+	}
+	&__quote {
+		padding: 20px;
+		position: relative;
+		p {
+			font-size: 1.2em !important;
+			margin: 0 60px;
+			position: relative;
+			@media (max-width: 500px) {
+				margin: 0 30px;
+			}
+			&:before, &:after {
+				content:"";
+				display: block;
+				position: absolute;
+				width: 25px;
+				height: 22px;
+			}
+			&:before {
+				background: url(/images/clever-qoute-up.png);
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				top:0;
+				transform: translate(-100%,-100%);
+			}
+			&:after {
+				background: url(/images/clever-qoute-down.png);
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				top:100%;
+				left: 100%;
+
+			}
+		}
+	}
+	&__flex--title {
+		margin-bottom: 20px;
+	}
+	&__after__quote {
+		font-size: 1.2em !important;
+		margin:20px 0 50px 0;
+		a {
+		    padding: 5px 10px;
+		    background: $pink;
+		    color: white;
+		    border-radius: 5px;
+		}
+	}
+}
