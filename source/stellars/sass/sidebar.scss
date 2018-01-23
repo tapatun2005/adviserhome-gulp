@@ -40,10 +40,12 @@ $grey: #edecec;
 		margin: 0 auto 10px;
 		img {
 			position: absolute;
+			backface-visibility: hidden;
 			top:50%;
 			left:50%;
 			transform:translate(-50%,-50%);
-			width: 150%;
+			height: 100%;
+			max-width: none;
 		}
 	}
 	&__name {
@@ -95,7 +97,7 @@ $grey: #edecec;
 		background:$gold;
 		color: $white;
 		&__title {
-			padding: 20px;
+			padding: 40px 20px;
 		}
 		iframe {
 			width:100%;
@@ -104,7 +106,7 @@ $grey: #edecec;
 		}
 	}
 	&__bottom {
-		padding: 20px;
+		padding: 80px 20px 20px 20px;
 		background: $navy;
 		color:$white;
 		a {

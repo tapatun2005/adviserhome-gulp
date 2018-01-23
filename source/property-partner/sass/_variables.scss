@@ -1,0 +1,31 @@
+// Variables
+
+$blue: #3498db;
+$black: #333;
+$white: #fff;
+$green: #44d371;
+$grey: #f5f5f5;
+
+// Helpers
+
+%fx {
+	display: flex;
+	&--center {
+		justify-content: center;
+	}
+	&--between {
+		justify-content: space-between;
+	}
+	&--around {
+		justify-content: space-around;
+	}
+	&--wrap {
+		flex-wrap: wrap;
+	}
+}
+
+%al {
+	&--center {
+		align-items: center;
+	}
+}

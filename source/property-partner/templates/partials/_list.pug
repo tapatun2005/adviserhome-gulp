@@ -1,0 +1,47 @@
+.pp-js
+		
+		.pp-js-link.is-active Diversification
+		.pp-js-content.is-active Buy-to-let (BTL) investors often acquire only a handful of properties. In fact, some commit their entire pool of funds into a single flat. It's a risky approach. The neighbourhood may under-perform. Tenants may default. The property could flood, or stay empty for a time – the list goes on. Property Partner's Discretionary Managed Service makes it easy to spread your investments across multiple sites – thereby reducing risk.
+
+		.pp-js-link Liquidity
+		.pp-js-content A key requirement for any investment is the ability to exit when required. Even the strongest property investment can be marred if capital is tied up for months (or years), when it's much needed elsewhere. Our unique Resale market solves this. Shares can be sold to other investors through our platform, with the average time to sell standing at circa 3 days. The market means shares can be sold incrementally, if needed.
+
+		.pp-js-link Unrivalled expertise
+		.pp-js-content All too often, investors stick to their own neighbourhood. By contrast, Property Partner investors get access to the full range of opportunities nationwide. The options are curated by industry experts, led by our Director of Property, Robert Weaver – former Global Director of Residential Investment at RBS, and a member of the British Property Federation's Residential Committee. His team bring decades of industry experience, which allows them to identify outstanding investment opportunities, wherever they are.
+
+		.pp-js-link Costs
+		.pp-js-content Lone investors are hit by multiple charges. There are legal fees, letting agent finder fees, service charges, advertising fees to let, repairs, internal and exterior maintenance and, of course, management fees. Property Partner runs at scale, and with this comes considerable cost savings. Advised investors pay no entry charge (normally 2%), and ongoing management fees are cut to 10.5 percent of rental income (a fee already factored into the dividend yield).
+
+		.pp-js-link Negotiating Power
+		.pp-js-content Negotiating a good sale price individually can be tough. Vendors have little incentive to discount, and with good reason. They incur fixed costs when selling, so would rather save better deals for bulk buyers. Property Partner brings substantial buying power to each deal, generally purchasing multiple units in a block. This means significant savings on the sale price, which translates to an enhanced yield for the investor.
+
+		.pp-js-link Transparency
+		.pp-js-content How is your investment performing? Is it beating the market – or are there better opportunities elsewhere? Most landlords aren't sure much of the time. With us, each property is valued every quarter by an independent RICS surveyor to show how prices have changed. The Property Partner Resale market also provides a live guide to prices – showing what shares are being listed for all properties on the platform, along with what investors are bidding for them. Now, your portfolio can be benchmarked.
+
+		.pp-js-link Simple to invest, quickly
+		.pp-js-content Many landlords save up for months before spending their entire capital on a single transaction. This is inefficient and inadvisable. First, there's a dead period before the transaction is made, in which funds aren't being put to work. Second, committing to a single transaction is risky and assumes that the market is favourable – a hard call to make. Property Partner solves this by offering a way to invest in multiple tranches over time. You start earning rental income from the moment you invest.
+
+		.pp-js-link Tenant Management
+		.pp-js-content Bad tenants can refuse to pay rent, squat, damage a property, or just disappear at a moment's notice. The result is the same: serious harm to the landlord's income. We mitigate tenant risk for our investors in three ways. First: lettings are handled by an experienced team, who interview and manage tenants to minimise disruption. Second: we factor in void periods for the investor, so returns forecasts are realistic. Finally, any disruptions are diluted through diversification, made easy through our platform. This approach is why we have met or exceeded all of our rental forecasts to date.
+
+		.pp-js-link Stress and hassle free
+		.pp-js-content Many investors think property is more hassle than it's worth. The worry isn't necessarily misplaced, as a single overlooked factor can cause serious harm to a BTL deal. At Property Partner, we take care of everything. This includes all legal and logistical issues. Each property is held in a tax-efficient special purpose vehicle, and ring-fenced from Property Partner itself, and other investments on the platform. It makes investing in BTL simple, efficient, and totally transparent.
+
+script.
+	var links = document.querySelectorAll('.pp-js-link');
+	var content = document.querySelectorAll('.pp-js-content');
+	for(var i = 0; i < links.length; i++) {
+		links[i].addEventListener('click', function() {
+			for(var e = 0; e < links.length; e++ ) {
+				links[e].className = "pp-js-link";
+				content[e].className = "pp-js-content";
+			}
+			this.className = "pp-js-link is-active";
+			this.nextElementSibling.className = "pp-js-content is-active";
+		})	
+	}
+
+
+
+
+

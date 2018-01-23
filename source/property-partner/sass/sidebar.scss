@@ -1,0 +1,160 @@
+@import "variables";
+
+.pp-side {
+	width: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+		margin-bottom: 50px;
+	* {
+		box-sizing:border-box;
+	}
+}
+
+.pp-logo {
+	text-align: center;
+	@media (max-width: 992px) {
+		margin-bottom: 20px;
+	}
+	img {
+		width: 180px;
+	}
+}
+
+.pp-side-box {
+	padding: 30px;
+	background:$grey;
+	margin-top: 20px;
+	border: 1px solid rgba($black, .1);
+	@media (max-width: 992px) {
+		margin-top:0;
+		width:49%;
+	}
+	@media (max-width: 480px) {
+		width:100%;
+	}
+	h4 {
+		text-align: center;
+		font-size: 1.3em;
+		margin: 0 0 20px;
+	}
+}
+
+.pp-side-partners {
+	border: 1px solid rgba($black, .1);
+	@media (max-width: 992px) {
+		width:49%;
+	}
+	@media (max-width: 480px) {
+		width:100%;
+	}
+	h4 {
+		background: $black;
+		color: $white;
+		margin: 0;
+		text-align: center;
+		padding: 10px 20px;
+		font-size: 1.3em;
+	}
+	ul {
+		@extend %fx;
+		@extend %fx--wrap;
+		list-style:none;
+		padding:0;
+		margin:0;
+		padding: 20px;
+		li {
+			width: 48%;
+			img {
+				width:100%;
+			}
+		}
+	}
+}
+
+.pp-stats {
+	background: $grey;
+	padding: 40px;
+	border: 1px solid rgba($black, .1);
+	border-top: none;
+	@extend %fx;
+	@extend %fx--wrap;
+	@extend %fx--between;
+	@media (max-width: 992px) {
+		margin: 10px 0;
+		border-top: 1px solid rgba($black, .1);
+	}
+}
+
+.pp-stat {
+	width:100%;
+	text-align: center;
+	margin: 10px 0 0;
+	@media (max-width: 992px) {
+		width: 33%;
+	}
+	@media (max-width: 480px) {
+		width: 100%;
+	}
+	img {
+		width: 50px;
+	}
+	div {
+		margin-top: 10px;
+		font-weight: 700;
+		font-size: 1.65em;
+	}
+	span {
+		font-size: .8em;
+	}
+}
+
+.pp-contact {
+	h4 {
+		background: $blue;
+		padding: 10px 20px;
+		margin:0;
+		text-align: center;
+		color: $white;
+	}
+	&-fx {
+		@extend %fx;
+		padding: 20px;
+		border: 1px solid rgba($black, .2);
+		background: rgba($blue, .15);
+		@media (max-width: 992px) {
+			justify-content: center;
+		}
+
+		img {
+			width: 75px;
+			height: 75px;
+		}
+	}
+	&-details {
+		margin-left: 20px;
+		span, a {
+			display: block;
+		}
+		span {
+			font-weight: 700;
+			padding-bottom: 5px;
+			border-bottom: 1px solid rgba($black, .2);
+			margin-bottom: 10px;
+		}
+		a {
+			margin: 5px 0;
+			text-decoration: none;
+			color: rgba($black, .75);
+			font-size: .9em;
+		}
+	}
+}
+
+.pp-side-fx {
+	@media (max-width: 992px) {
+		display: flex;
+		justify-content: space-between;
+	}
+	@media (max-width: 480px) {
+		flex-wrap: wrap;
+	}
+}
