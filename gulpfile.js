@@ -1,4 +1,4 @@
-const folder = "prudential";
+const folder = "royal-london";
 const imagePath = "/cd-content/uploads/images/";
 
 
@@ -16,7 +16,8 @@ const gulp = require('gulp'),
 	argv = require('yargs').argv,
 	gulpif = require('gulp-if'),
 	path = require('path'),
-	reload = browserSync.reload;
+	reload = browserSync.reload,
+	plumber = require('gulp-plumber');
 
 var dirs = getDirectories('source');
 
@@ -24,21 +25,19 @@ gulp.task('default', ['compile', 'server', 'watch']);
 gulp.task('compile', ['templates','styles', 'images']);
 
 gulp.task('templates', function(){
-
-
 		gulp.src('source/'+folder+'/templates/*.pug')
+		.pipe(plumber())
 		.pipe(pug())
 
 
 		.pipe(gulp.dest('build/'+folder))
 			.pipe(gulpif(argv.production, replace('/images/', imagePath)))
 			.pipe(gulpif(argv.production, gulp.dest('build/'+folder+"/prod/")));
-	
-
 });
 
 gulp.task('styles', function(){
 		gulp.src('source/'+folder+'/sass/*.scss')
+			.pipe(plumber())
 			.pipe(sass())
 			.pipe(autoprefixer({
 		            browsers: ['last 2 versions'],
@@ -48,6 +47,7 @@ gulp.task('styles', function(){
 			.pipe(cssnano())
 
 		.pipe(gulp.dest('build/'+folder+'/css/'))
+			.pipe(plumber())
 			.pipe(gulpif(argv.production, replace('/images/', imagePath)))
 			.pipe(gulpif(argv.production, gulp.dest('build/'+folder+"/prod/css/")));
 });
@@ -55,6 +55,7 @@ gulp.task('styles', function(){
 gulp.task('images', function(){
 	//for(let i = 0; i < dirs.length; i++){
 		gulp.src("source/"+folder+"/images/*")
+		.pipe(plumber())
 		.pipe(imagemin())
 		.pipe(gulp.dest("build/"+folder+"/images/"));
 	//}
