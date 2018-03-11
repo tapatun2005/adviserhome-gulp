@@ -35,8 +35,38 @@ $white: #fff;
 	}
 	a {
 		font-weight: 700 !important;
-		color: $orange !important;
 		font-family: "Georgia", "Arial", sans-serif !important;
+		img {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+	h2 {
+		font-size: 1.75em !important;
+		font-weight: 700 !important;
+		color: $orange !important;
+		font-family: "Georgia", "Arial", sans-serif !important; 
+	}
+}
+
+.rlondon_principles {
+	display: flex;
+	flex-wrap: wrap;
+	div {
+		flex: auto;
+		margin-bottom: 10px;
+		border: 1px solid rgba(0,0,0,.2);
+		h3 {
+			padding: 5px 10px;
+			background-color: $purple;
+			margin: 0 !important;
+			color: $white !important;
+			font-size: 1.2em !important;
+			font-family: "Georgia", "Arial", sans-serif !important;
+		}
+		p {
+			padding: 20px;
+		}
 	}
 }
 
@@ -92,4 +122,22 @@ $white: #fff;
 	border-radius: 10px;
 	font-size: 1.2em !important;
 	display: inline-block;
+	&.-sm {
+		margin: 0 0 20px 0!important;
+
+	}
+}
+span.rlondon_btn {
+	margin: 0;
+	display: inline-block;
+}
+
+.rlondon_disclaimer  {
+	padding-top: 10px;
+	border-top: 1px solid rgba(0,0,0,.1);
+	margin: 20px 0;
+	p {
+		font-family: "Georgia", "Arial", sans-serif !important;
+		font-size: .8em !important;
+	}
 }

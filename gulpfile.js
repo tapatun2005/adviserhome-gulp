@@ -17,12 +17,15 @@ const gulp = require('gulp'),
 	gulpif = require('gulp-if'),
 	path = require('path'),
 	reload = browserSync.reload,
-	plumber = require('gulp-plumber');
+	plumber = require('gulp-plumber'),
+	runSequence = require('run-sequence');
 
 var dirs = getDirectories('source');
 
-gulp.task('default', ['compile', 'server', 'watch']);
-gulp.task('compile', ['templates','styles', 'images']);
+gulp.task('default', function(callback){
+	runSequence('compile', 'watch', 'server', callback)
+});
+gulp.task('compile', ['templates','styles', 'images']);      
 
 gulp.task('templates', function(){
 		gulp.src('source/'+folder+'/templates/*.pug')
@@ -62,15 +65,15 @@ gulp.task('images', function(){
 })
 
 gulp.task('watch', function(){
-	gulp.watch('source/'+ folder +'/sass/*.scss', ["styles"]);
-	gulp.watch('source/'+ folder +'/templates/**/*.pug', ["templates"]);
-	gulp.watch('source/'+ folder +'/images/*', ["images"]);
+	gulp.watch('./source/'+ folder +'/sass/*.scss', ["styles"]);
+	gulp.watch('./source/'+ folder +'/templates/**/*.pug', ["templates"]);
+	gulp.watch('./source/'+ folder +'/images/*', ["images"]);
 })
 
 gulp.task('server', function () {
-  return browserSync.init(["build/"+ folder +"/index.html", "build/"+ folder +"/css/*.css"], {
+  return browserSync.init(["./build/**/*"], {
     server: {
-      baseDir: 'build/'+folder + "/"
+      baseDir: './build/'+folder
     }
   });
 });
