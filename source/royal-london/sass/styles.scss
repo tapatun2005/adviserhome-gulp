@@ -1,6 +1,7 @@
 $purple: #421953;
 $orange: #fd7659;
 $white: #fff;
+$purple2: #7d3d97;
 
 .rlondon {
 	font-family: "Georgia", "Arial", sans-serif !important; 
@@ -73,8 +74,8 @@ $white: #fff;
 .rlondon_assets {
 	margin-top: 40px;
 	&_header {
-		background: url(/images/pelicans2.png) no-repeat 100% / cover;
-		padding: 150px 100px 20px 40px;
+		background: $purple2 url(/images/purple2.jpg) no-repeat 100%/auto 100%;;
+		padding: 30px 100px 20px 40px;
 		h2 {
 			color: $white !important;
 			font-family: "Georgia", "Arial", sans-serif !important;
