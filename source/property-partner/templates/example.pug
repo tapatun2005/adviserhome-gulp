@@ -1,0 +1,17 @@
+style.
+	.pp-flex {
+		display: flex;
+	}
+	.pp-side {
+		margin-left: 20px;
+	}
+
+	@media (max-width: 992px) {
+		.pp-flex {
+			flex-direction: column;
+		}
+	}
+
+.pp-flex
+	include index.pug
+	include sidebar.pug

@@ -1,0 +1,76 @@
+$dark-green: #00464a;
+$green: #9da901;
+
+.mg_contact,
+.mg_contact * {
+	box-sizing:border-box;
+	font-family: Arial, sans-serif !important;
+}
+
+
+.mg_contact {
+	
+	box-sizing:border-box;
+	width: 100%; 
+	position: relative;
+	max-width: 370px;
+	background: url(/images/mg-bg.jpg) no-repeat left bottom / 40% auto;
+	border: 2px solid $green;
+	padding: 20px 20px 120px 20px;
+	h2 {
+		color: $dark-green;
+		font-size: 2em !important;
+		font-weight: 700 !important;
+		margin: 10px 0 !important;
+	}
+	&_support {
+		font-size: 1.3em !important;
+		color:$dark-green;
+		
+	}
+	&_tel {
+		font-size: 2em !important;
+		color: $dark-green !important;
+		text-decoration: none !important;
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
+	p {
+		color: $dark-green;
+		margin:40px 20px 20px 100px;
+	}
+	&_email {
+		text-decoration: none !important;
+		font-size: 1.2em !important;
+		color: white !important;
+		display: inline-block;
+		position: absolute;
+		bottom: 20px;
+		right:20px;
+		padding: 10px 50px 10px 20px;
+		border-radius: 20px;
+		background: $dark-green;
+		&:before,
+		&:after {
+			content:"";
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+		&:before {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: white;
+			right: 10px;
+		}
+		&:after {
+			border-top: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			border-left: 8px solid $dark-green;
+			right: 15px;
+		}
+	}
+}
+

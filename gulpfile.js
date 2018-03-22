@@ -1,4 +1,4 @@
-const folder = "stellars";
+const folder = "royal-london";
 const imagePath = "/cd-content/uploads/images/";
 
 
@@ -15,64 +15,65 @@ const gulp = require('gulp'),
 	environments = require('gulp-environments'),
 	argv = require('yargs').argv,
 	gulpif = require('gulp-if'),
-	path = require('path');
+	path = require('path'),
+	reload = browserSync.reload,
+	plumber = require('gulp-plumber'),
+	runSequence = require('run-sequence');
 
 var dirs = getDirectories('source');
 
-gulp.task('default', ['compile', 'watch', 'server']);
-gulp.task('compile', ['templates','styles', 'images']);
+gulp.task('default', function(callback){
+	runSequence('compile', 'watch', 'server', callback)
+});
+gulp.task('compile', ['templates','styles', 'images']);      
 
 gulp.task('templates', function(){
-
-	for(let i = 0; i < dirs.length; i++){
-		let template = 
-		gulp.src('source/'+dirs[i]+'/templates/*.pug')
-		.pipe(pug());
+		gulp.src('source/'+folder+'/templates/*.pug')
+		.pipe(plumber())
+		.pipe(pug())
 
 
-		template.pipe(gulp.dest('build/'+dirs[i]))
+		.pipe(gulp.dest('build/'+folder))
 			.pipe(gulpif(argv.production, replace('/images/', imagePath)))
-			.pipe(gulpif(argv.production, gulp.dest('build/'+dirs[i]+"/prod/")));
-	}
-
+			.pipe(gulpif(argv.production, gulp.dest('build/'+folder+"/prod/")));
 });
 
 gulp.task('styles', function(){
-	for(let i = 0; i < dirs.length; i++){
-		let style = 
-			gulp.src('source/'+dirs[i]+'/sass/*.scss')
+		gulp.src('source/'+folder+'/sass/*.scss')
+			.pipe(plumber())
 			.pipe(sass())
 			.pipe(autoprefixer({
 		            browsers: ['last 2 versions'],
 		            cascade: false
 		        }))
 			.pipe(gcmq())
-			.pipe(cssnano());
+			.pipe(cssnano())
 
-		style.pipe(gulp.dest('build/'+dirs[i]+'/css/'))
+		.pipe(gulp.dest('build/'+folder+'/css/'))
+			.pipe(plumber())
 			.pipe(gulpif(argv.production, replace('/images/', imagePath)))
-			.pipe(gulpif(argv.production, gulp.dest('build/'+dirs[i]+"/prod/css/")))
-	}
+			.pipe(gulpif(argv.production, gulp.dest('build/'+folder+"/prod/css/")));
 });
 
 gulp.task('images', function(){
-	for(let i = 0; i < dirs.length; i++){
-		let images = gulp.src("source/"+dirs[i]+"/images/*")
-		.pipe(imagemin());
-		images.pipe(gulp.dest("build/"+dirs[i]+"/images/"));
-	}
+	//for(let i = 0; i < dirs.length; i++){
+		gulp.src("source/"+folder+"/images/*")
+		.pipe(plumber())
+		.pipe(imagemin())
+		.pipe(gulp.dest("build/"+folder+"/images/"));
+	//}
 })
 
 gulp.task('watch', function(){
-	gulp.watch('source/**/sass/*.scss', ["styles"]);
-	gulp.watch('source/**/templates/*.pug', ["templates"]);
-	gulp.watch('source/**/images/*', ["images"]);
+	gulp.watch('./source/'+ folder +'/sass/*.scss', ["styles"]);
+	gulp.watch('./source/'+ folder +'/templates/**/*.pug', ["templates"]);
+	gulp.watch('./source/'+ folder +'/images/*', ["images"]);
 })
 
-gulp.task('server', ['compile'], function () {
-  return browserSync.init(['build/**/js/*.js', 'build/**/css/*.css', 'build/**/index.html', 'build/**/images/*'], {
+gulp.task('server', function () {
+  return browserSync.init(["./build/**/*"], {
     server: {
-      baseDir: './build/'
+      baseDir: './build/'+folder
     }
   });
 });

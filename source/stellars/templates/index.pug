@@ -2,7 +2,7 @@ link(rel="stylesheet", href="css/styles.css")
 
 .stellar
 	.stellar__logo
-		img(src="/images/stellar-logo.png", alt="Stellar")
+		img(src="/images/stellar-logo-1.png", alt="Stellar")
 	
 	section.stellar__section
 		.stellar__heading.stellar__heading--1
@@ -24,21 +24,50 @@ link(rel="stylesheet", href="css/styles.css")
 				li.stellar__icon
 					//- img(src="/images/stellar-icon-3.jpg", alt="")
 					span Any kind of physical transfer of value
+
+		.stellar__content
+			h3 Investment Choices
+			.stellar__slider__wrap
+				ul#slider.stellar__slider
+					li
+						img(src="/images/stellar-img-11.jpg", alt="")
+						span Forestry
+					li.is-active
+						img(src="/images/stellar-img-22.jpg", alt="")
+						span Farming
+					li
+						img(src="/images/stellar-img-33.jpg", alt="")
+						span Hotels
+					li
+						img(src="/images/stellar-img-44.jpg", alt="")
+						span Renewable Energy
+					li
+						img(src="/images/stellar-img-55.jpg", alt="")
+						span Residential Property Development
+					li
+						img(src="/images/stellar-img-66.jpg", alt="")
+						span Bridging Finance
+					li
+						img(src="/images/stellar-img-77.jpg", alt="")
+						span AiM Shares
+
+				.stellar__nav-arrow#prev <
+				.stellar__nav-arrow#next >
 		
 		.stellar__content
-			h3 Clients benefits: 
+			h3 A service for every client
 			p Our services have been refined over the years and have been structured to be transparent and to offer clients a choice based on their investment approach.
 			p Your client retains full control of their capital and can benefit from any capital growth and income that is generated. This ensures that their capital is always available if it's required (unexpectedly or otherwise) in the future.
 
 	section.stellar__section
-		.stellar__heading.stellar__heading--2
+		//- .stellar__heading.stellar__heading--2
 			.stellar__titles
 				h2 A service for every client
 
 		.stellar__content
 			h3 Discretionary Managed AiM Portfolio Services
 			.stellar__tables.stellar__tables--2
-				.stellar__table.stellar__table--orange
+				.stellar__table.stellar__table--yellow
 					.stellar__table__img
 						img(src="/images/stellar-bg-3.jpg", alt="")
 					h4 Investing in AiM
@@ -48,9 +77,9 @@ link(rel="stylesheet", href="css/styles.css")
 						ul
 							li Most diversified AiM portfolio in the market
 							li Available on wrap platform
-						a(href="http://bit.ly/2ss20Fi" target="_blank") More
+						a(href="http://bit.ly/2uxLMLk" target="_blank") More
 
-				.stellar__table.stellar__table--yellow
+				.stellar__table.stellar__table--orange
 					.stellar__table__img
 						img(src="/images/stellar-bg-4.jpg", alt="")
 					h4 Protecting ISAs
@@ -60,9 +89,9 @@ link(rel="stylesheet", href="css/styles.css")
 						ul
 							li Most diversified AiM portfolio in the market
 							li Available on wrap platform
-						a(href="http://bit.ly/2siaJLE" target="_blank") More
+						a(href="http://bit.ly/2uxPRiy" target="_blank") More
 
-			h3 Asset backed portfolios
+			h3 DISCRETIONARY MANAGED ASSET BACKED PORTFOLIO SERVICES
 			.stellar__tables.stellar__tables--3
 				.stellar__table.stellar__table--green
 					.stellar__table__img
@@ -74,7 +103,7 @@ link(rel="stylesheet", href="css/styles.css")
 						ul
 							li Investing in high-security tangible assets
 							li Access to 7 asset classes
-						a(href="http://bit.ly/2rMRJl6" target="_blank") More
+						a(href="http://bit.ly/2tPU6sm" target="_blank") More
 
 				.stellar__table.stellar__table--turquoise
 					.stellar__table__img
@@ -86,7 +115,7 @@ link(rel="stylesheet", href="css/styles.css")
 						ul
 							li Investing in high-security tangible assets
 							li Target income of 4.5%
-						a(href="http://bit.ly/2rw5Uf1" target="_blank") More
+						a(href="http://bit.ly/2uxTAwm" target="_blank") More
 
 				.stellar__table.stellar__table--blue
 					.stellar__table__img
@@ -98,32 +127,61 @@ link(rel="stylesheet", href="css/styles.css")
 						ul
 							li Maintain IHT & Entrepreneurs' Relief
 							li Defer CGT
-						a(href="http://bit.ly/2rIIrLt" target="_blank") More
+						a(href="http://bit.ly/2sNQEP6" target="_blank") More
 
-			h3 Investment Choice
+script.
+	function slider(){
+		var slider = document.getElementById('slider');
+		var children = slider.children;
+		var sliderWrap = document.querySelector(".stellar__slider__wrap");
 
-			ul.stellar__slider
-				li
-					img(src="/images/stellar-img-1.jpg", alt="")
-					span Forestry
-				li
-					img(src="/images/stellar-img-2.jpg", alt="")
-					span Farming
-				li
-					img(src="/images/stellar-img-3.jpg", alt="")
-					span Hotels
-				li
-					img(src="/images/stellar-img-4.jpg", alt="")
-					span Renewable Energy
-				li
-					img(src="/images/stellar-img-5.jpg", alt="")
-					span Residential Property Development
-				li
-					img(src="/images/stellar-img-6.jpg", alt="")
-					span Bridging Finance
-				li
-					img(src="/images/stellar-img-7.jpg", alt="")
-					span AiM Shares
+		var prevButton = document.getElementById('prev');
+		var nextButton = document.getElementById('next');
+
+		prevButton.addEventListener('click', function(){
+			nextSlide('prev');
+		});
+		nextButton.addEventListener('click', function(){
+			nextSlide('next');
+		});
+
+		function indexOfClass(node) {
+			for (var i = 0; i < children.length; i++) {
+				if(children[i] === node) {
+					return i;
+				}
+			}
+			return -1;
+		}
+
+		function nextSlide(direction) {
+			var activeSlide = document.querySelector('#slider li.is-active');
+			if(direction == "next") {
+				var next = indexOfClass(activeSlide) + 1;
+			} else {
+			 	var next = indexOfClass(activeSlide) - 1;
+			}
+
+			if (children[next] == null ) {
+				if( direction == "next" ) {
+					next = 0;
+				} else {
+					next = children.length - 1;
+				}
+			}
+			
+			activeSlide.classList.remove('is-active');
+			children[next].classList.add('is-active');
+		}
+
+		var intervals = setInterval(function(){nextSlide('next')}, 3000);
+
+		intervals;
+
+	};
+
+	
+	slider();
 
 
 

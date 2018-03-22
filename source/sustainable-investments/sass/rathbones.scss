@@ -1,0 +1,41 @@
+$green: #00b2a9;
+$grey: #d5d5d5;
+
+.rb-contact {
+	display: flex;
+	flex-wrap: wrap;
+	._item {
+		background: $grey;
+		margin-bottom: 20px;
+		width: 100%;
+		max-width: 320px;
+	}
+	._text {
+		padding: 20px;
+	}
+	._name {
+		font-size: 2em;
+		color: rgba(0,0,0,.5);
+	}
+	p {
+		color: rgba(0,0,0,.5);
+		padding: 0;
+	}
+	._img {
+		text-align: right;
+		img {
+			width: 100%;
+			margin-top: -30px;
+		}
+	}
+	a {
+		text-decoration: none !important;
+		color: rgba(0,0,0,.5);
+		position: relative;
+		z-index: 1;
+		img {
+			width: 18px;
+			margin-right: 10px;
+		}
+	}
+}

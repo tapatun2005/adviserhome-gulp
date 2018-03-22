@@ -1,0 +1,145 @@
+
+#prudential__page {
+		display: block;
+		width: 100%;
+		max-width: 750px;
+		font-family: Helvetica, Arial, san-serif;
+	}
+	#prudential__page * {
+		box-sizing: border-box;
+	}
+
+	.prudential__logo {
+		width: 100%;
+		max-width: 550px;
+	}
+
+	.prudential__intro {
+		padding-left: 20px;
+		border-left: 10px solid #e8352d;
+		margin: 30px 0 50px;
+	}
+
+	.prudential__intro p {
+		font-size: 1.2em !important;
+		line-height: 1.4em !important;
+		text-align: justify;
+	}	
+
+	h2.prudential__h2 {
+		font-size: 1.75em !important;
+		font-weight: bold;
+    	margin: 90px 0 30px !important;
+	}
+	.prudential__link--red {
+		font-weight: bold !important;
+		text-decoration: underline !important;
+		color: #e8352d !important;
+	}
+	.prudential__link--red:hover {
+		color: #c3251e !important;
+	}
+	.prudential__link--blue {
+		display: inline-block;
+		padding: 10px 20px;
+		text-align: center;
+		min-width: 150px;
+		background: #2c53a0;
+		color: #fff !important;
+		text-decoration: none !important;
+		margin: 20px 0;
+		font-size: 1.3em !important;
+		font-weight: bold !important;
+	}
+
+	.prudential__link--blue:hover {
+		text-decoration: none !important;
+		color:#fff !important;
+		background: #264788;
+	}
+
+	.prudential__red__section {
+		background: #e8352d;
+		margin: 50px 0;
+	}
+
+	.prudential__red__section img {
+		width:100%;
+	}
+	.prudential__red__section h2 {
+		color: #fff !important;
+	    font-size: 1.9em !important;
+	    padding: 10px 0 !important;
+	    border-bottom: 1px solid rgba(255,255,255,.5);
+	    font-weight: bold !important;
+	}
+	.prudential__red__section p {
+		color:#fff !important;
+	}
+	.prudential__red__section__content {
+		padding: 20px 30px;
+	}
+
+	.prudential__section {
+		display: flex;
+		display: -ms-flex;
+		padding: 30px 40px;
+		width:100%;
+	}
+
+	.prudential__section:last-child {
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		margin-bottom:40px;
+	}
+
+	.prudential__section__grey {
+		background:#f3f3f3;
+		border:1px solid rgba(0,0,0,.05);
+	}
+
+	.prudential__section--left {
+		margin-right: 40px;
+	}
+	.prudential__section--right {
+		/*width:50%;*/
+	}
+	.prudential__section--left img {
+		width: 325px;
+		margin-top: 20px;
+	}
+
+	.prudential__section--right h2 {
+		padding-bottom: 20px !important;
+		font-size: 1.9em !important;
+		font-weight: bold !important;
+	}
+
+	.prudential__section--right ul {
+		list-style:none !important;
+		padding-left: 0 !important;
+	}
+
+	.prudential__section--right li {
+		display: block;
+		position: relative;
+		padding: 3px 0 3px 30px !important;
+		margin-left: 20px;
+	}
+	.prudential__section--right li:before {
+		content:"";
+		display: block;
+		width: 8px;
+		height: 8px;
+		position: absolute;
+		border-radius: 50%;
+		background: #2c53a0;
+		top: 50%;
+		left:0;
+		transform:translateY(-50%);
+	}
+
+	/*red:#e8352d*/
+	/*red-hover: #c3251e */
+	/*blue:#2c53a0*/
+	/*blue-hover:#264788*/
+	/*grey:#f3f3f3*/

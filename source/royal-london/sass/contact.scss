@@ -1,0 +1,52 @@
+$purple: #421953;
+$orange: #fd7659;
+$white: #fff;
+$font: "Georgia", "Arial", sans-serif !important; 
+
+.rlondon_contact {
+	* {
+		box-sizing: border-box;
+	}
+	background: $purple;
+	padding-bottom: 20px;
+	h2 {
+		font-size: 1.75em;
+		font-family: $font;
+		color:$white !important;
+		padding-bottom:10px;
+		margin: 0 10px;
+		border-bottom: 2px solid $orange;
+
+	}
+	p {
+		margin-top: 10px;
+		color: $orange !important;
+		font-family: $font;
+		margin:10px 10px 30px 10px;
+
+	}
+	margin-bottom: 40px;
+}
+
+.rlondon_contact_text {
+	padding: 20px;
+}
+
+.rlondon_contact_head {
+	width: 100%;
+	padding: 60px;
+	background: url(/images/rlonodon-contacts.jpg) no-repeat 100% / cover;
+}
+
+.rlondon_btn {
+	font-family: "Georgia", "Arial", sans-serif !important;
+	text-decoration: none !important;
+	color: $white !important;
+	background: $orange !important;
+	padding: 5px 20px;
+	border-radius: 10px;
+	font-size: 1.2em !important;
+	display: inline-block;
+	margin-left: 10px;
+
+}

@@ -1,0 +1,129 @@
+#prudential__banner {
+		background-color: #eaeaea;
+		width:100%;
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	#prudential__banner * {
+		bfvox-sizing: border-box;
+	}
+
+	.prudential__banner__logo {
+		text-align: center;
+		padding: 20px 10px;
+	}
+	.prudential__banner__logo img {
+		width: 175px;
+	}
+
+	.prudential__banner__flex {
+		display:-ms-flex;
+		display: flex;
+		border-top: 16px solid #e8352d;
+		width:100%;
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+	}
+
+	.prudential__item {
+		width: 32.5%;
+		position: relative;
+	}
+
+	.prudential__image {
+		width:100%;
+		position: relative;
+		overflow: hidden;
+	}
+	.prudential__image img {
+		width:100%;
+		transition: all .5s ease-in-out;
+	}
+	.prudential__image h2 {
+		position: absolute;
+		bottom:0px;
+		color: #fff !important;
+		font-weight: 700 !important;
+		padding: 10px 30px !important;
+		text-align: center !important;
+		font-size: 1.6em !important;
+		width: 100%;
+	} 
+
+	.prudential__item:hover img {
+		transform:scale(1.2);
+	}
+
+	.prudential__desc {
+		padding: 15px 30px 30px !important;
+		text-align: center;
+		position: relative;
+		display: block;
+	}
+
+	.prudential__desc:after {
+		content: "";
+		display: block;
+		width: 1px;
+		height: 75%;
+		background-color: rgba(0,0,0,.1);
+		position: absolute;
+		right:-2%;
+		top:50%;
+		transform:translateY(-50%);
+		-webkit-transform:translateY(-50%);
+	}
+
+	.prudential__item:last-child .prudential__desc:after {
+		display: none;
+	}
+
+	.prudential__desc p {
+		min-height: 80px !important;
+
+	}
+
+	.prudential__desc a {
+		background-color: #e8352d !important;
+		padding: 15px 10px !important;
+		color:white !important;
+		display: block;
+		width: 175px;
+		text-align: center !important;
+		margin: 0 auto !important;
+		text-decoration: none !important;
+		font-size: 1.3em !important;
+		font-weight: bold !important;
+		transition: all .2s ease-in-out;
+	}
+
+	.prudential__desc a:hover {
+		color:#fff !important;
+		text-decoration: none !important;
+		background-color: #c3251e !important;
+	}
+
+	@media screen and (max-width: 720px) {
+		.prudential__banner__flex {
+			flex-direction: column;
+			-webkit-flex-direction: column;
+		}
+		.prudential__item {
+			width:100%;
+		}
+		.prudential__desc:after {
+			display: none;
+		}
+		.prudential__image h2 {
+			width: 100%;
+		}
+		.prudential__desc p {
+			min-height: 0px !important;
+
+		}
+	}
+	/*grey: #eaeaea*/
+	/*red:#e8352d*/
+	/*red-hover: #c3251e */
+	/*blue:#2c53a0*/
+	/*blue-hover:#264788*/
+	/*grey:#f3f3f3*/
