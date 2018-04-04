@@ -1,0 +1,25 @@
+.bmo-slider {
+	width:100%;
+	max-width: 370px;
+	height: 130px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	li {
+		width: 100%;
+		heigth: 100%;
+		position: absolute;
+		top: 0;
+		left:0;
+		opacity: 0;
+		transition: opacity .5s ease-in-out;
+		img {
+			width: 100%;
+		}
+		&.is-active {
+			z-index: 1;
+			opacity: 1;
+		}
+	}
+}
