@@ -1,3 +1,4 @@
+
 const folder = "liontrust";
 const imagePath = "/cd-content/uploads/images/";
 

@@ -1,0 +1,43 @@
+link(rel="stylesheet", href="css/bmo-contact.css")
+
+p
+	img(alt="" src="/images/Global Asset Management_Stacked.jpg" style="width: 250px; height: 212px;")
+p
+	a(href="http://www.bmogam.com/documents/2017-responsible-investment-review/" target="_blank" )
+		img(alt="" src="/images/Download investment review (002).jpg" style="width: 300px; height: 75px;")
+
+ul.bmo-slider
+	li
+		a(href="http://www2.bmogam.com/l/123372/2018-03-13/87cnjt" target="_blank")
+			img(src="/images/si-bmo-1.jpg", alt="BMO Report")
+	li
+		a(href="http://www2.bmogam.com/l/123372/2018-03-13/87cnjt" target="_blank")
+			img(src="/images/si-bmo-2.jpg", alt="BMO Report")
+	li
+		a(href="http://www2.bmogam.com/l/123372/2018-03-13/87cnjt" target="_blank")
+			img(src="/images/si-bmo-3.jpg", alt="BMO Report")
+	li
+		a(href="http://www2.bmogam.com/l/123372/2018-03-13/87cnjt" target="_blank")
+			img(src="/images/si-bmo-4.jpg", alt="BMO Report")
+	li
+		a(href="http://www2.bmogam.com/l/123372/2018-03-13/87cnjt" target="_blank")
+			img(src="/images/si-bmo-5.jpg", alt="BMO Report")
+
+script.
+	var slider = document.querySelector('.bmo-slider');
+	var items = slider.querySelectorAll('li');
+	var active = 0;
+	items[active].classList.add("is-active");
+
+	setInterval(function(){
+		for(var i = 0; i < items.length; i++) {
+			items[i].classList.remove('is-active');
+		}
+		active += 1;
+		if(items[active] != undefined) {
+			items[active].classList.add('is-active');
+		} else {
+			active = 0;
+			items[active].classList.add('is-active');
+		}
+	},5000);
