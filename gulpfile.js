@@ -1,4 +1,5 @@
-const folder = "sustainable-investments";
+
+const folder = "liontrust";
 const imagePath = "/cd-content/uploads/images/";
 
 
