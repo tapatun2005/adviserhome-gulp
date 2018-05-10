@@ -1,5 +1,5 @@
 
-const folder = "nsl";
+const folder = "sevenim";
 const imagePath = "/cd-content/uploads/images/";
 
 
