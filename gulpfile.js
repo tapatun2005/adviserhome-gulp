@@ -1,5 +1,5 @@
 
-const folder = "liontrust";
+const folder = "nsl";
 const imagePath = "/cd-content/uploads/images/";
 
 
