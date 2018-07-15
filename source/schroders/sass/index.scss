@@ -1,0 +1,96 @@
+$white: #fff;
+$blue: #1175b5;
+$navy: #063b70;
+$teracote: #14e6f1;
+
+.schroders {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	* {
+		box-sizing: border-box;
+	}
+	._top {
+		background: $blue url(/images/schroders-bg.png) no-repeat 100% 0/ 250px auto;
+		padding: 60px 40px;
+		@media(max-width: 480px) {
+			background-size: 40%;
+		}
+	}
+	._logo {
+		img {
+			width: 250px;
+			@media(max-width: 480px) {
+				width: 175px;
+			}
+		}
+	}
+	._tagline {
+		color: $navy;
+		font-size: 3em;
+		width: 70%;
+		font-weight: 700;
+		@media(max-width: 480px) {
+			font-size: 2em;
+		}
+	}
+	._body {
+		background: $navy;
+		padding: 40px;
+		._title {
+			color: $teracote;
+			font-weight: 700;
+			font-size: 1.35em;
+		}
+		._cols {
+			display: flex;
+			justify-content: space-between;
+			margin: 60px 0;
+			align-items: flex-start;
+			@media(max-width: 992px) {
+				flex-wrap: wrap;
+			}
+		}
+		._text {
+			width: 70%;
+			border-left: 10px solid $teracote;
+			padding-left: 25px;
+			margin-bottom: 20px;
+			color: $white;
+			@media(max-width: 992px) {
+				width: 100%;
+			}
+		}
+		._link {
+			text-decoration: none !important;
+			color: $white;
+			display: inline-block;
+			margin: 40px 0 0;
+			padding: 10px 50px 10px 20px;
+			position: relative;
+			background: darken($navy, 10);
+			transition: all .1s ease-in-out;
+			&:after {
+				content: '';
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				transform: translate(0,-50%);
+				width: 20px;
+				height: 20px;
+				background: url(/images/schroders-link.png) no-repeat 0 / 100%; 
+			}
+			&:hover {
+				background: darken($navy, 7);
+			}
+		}
+		._video {
+			padding: 0 60px;
+			@media(max-width: 992px) {
+				padding: 20px 0;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

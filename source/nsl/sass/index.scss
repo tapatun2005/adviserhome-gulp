@@ -1,0 +1,99 @@
+$white: #fff;
+$green: #73a500;
+$pink: #b40087;
+$purple: #502387;
+$black: #444444;
+
+.nsl {
+	font-size: 16px;
+	font-family: "Helvetica", "Arial", sans-serif;
+	* {
+		box-sizing: border-box;
+	}
+	._top {
+		display: flex;
+		justify-content: space-between;
+		border-top: 15px solid $green;
+		padding: 0 20px;
+	}
+	._logo {
+		display: block;
+		margin-right: 20px;
+		width: 160px;
+		img {
+			width: 100px;
+			@media(max-width: 480px) {
+				width: 85px;
+			}
+		}
+	}
+	._tagline {
+		font-size: 1.5em;
+		margin-top: 20px;
+		color: $green;
+		text-align: right;
+		@media (max-width: 600px) {
+			font-size: 1.1em;
+		}
+		a {
+			display: inline-block;
+			margin: 5px 0;
+			font-size: .75em;
+			padding: 5px 10px;
+			border-radius: 5px;
+			text-decoration: none !important;
+			background: $black;
+			color: white;
+			fnot-weigth: 700 !important;
+			&:hover {
+				background: darken($black, 10);
+			}
+		}
+	}
+	._grid {
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0;
+		flex-wrap: wrap; 
+	}
+	._item {
+		padding: 20px 10px;
+		margin: 10px 0;
+		width: 24%;
+		height: 250px;
+		background: $green;
+		transition: all .1s ease-in-out;
+		@media (max-width: 520px) {
+			width: 48%;
+		}
+		&:hover {
+			background: darken($green, 5);
+		}
+		&.-purple {
+			background: $purple;
+			&:hover {
+				background: darken($purple, 5);
+			}
+		}
+		&.-pink {
+			background: $pink;
+			&:hover {
+				background: darken($pink, 5);
+			}
+		}
+		a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: $white !important;
+			font-weigth: 700;
+			font-size: 1.4em;
+			text-decoration: none !important;
+			text-align: center;
+		}
+
+	}
+}

@@ -1,4 +1,3 @@
-
 const folder = "orbis";
 const imagePath = "/cd-content/uploads/images/";
 
