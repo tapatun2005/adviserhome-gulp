@@ -1,0 +1,128 @@
+$blue: #3c4472;
+$blue-light: #dce6ef;
+$blue-dark: #1a255b;
+$white: #fff;
+.orbis,
+.orbis * {
+	box-sizing: border-box;
+}
+
+.orbis {
+	font-family: Helvetica, Arial, sans-serif;
+	max-width: 1170px;
+	width: 100%;
+	._header {
+		background: $blue-dark;
+		padding: 10px 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		img {
+			width: 100px;
+		}
+		._title {
+			font-size: 1.75em;
+			color: $white;
+			margin-left: 30px;
+			@media (max-width: 650px) {
+				font-size: 1.35em;
+			}
+		}
+	}
+	._content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 20px 0;
+		justify-content: space-between;
+		._welcome {
+			width: 48%;
+			padding: 40px;
+			margin: 5px 0;
+			@media (max-width: 650px) {
+				width: 100%;
+			}
+		}
+		._video {
+			width: 48%;
+			margin: 5px 0;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			@media (max-width: 650px) {
+				width: 100%;
+			}
+			div {
+				width: 35%;
+				&:first-child {
+					img {
+						width: 100%;
+					}
+				}
+			}
+			img {
+				width: 75%;
+			}
+			
+		}
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		list-style:none;
+		margin: 0 !important;
+		padding:0 !important;
+		li {
+			width: 24%;
+			margin: 5px 0;
+			@media (max-width: 640px) {
+				width: 49%;
+			}
+			span {
+				display: block;
+			}
+			a {
+				display: block;
+			}
+			&.-blue {
+				background: $blue;
+			}
+			&.-blue-dark {
+				background: $blue-dark;
+			}
+		}
+	}
+	._top-links {
+		a {
+			padding: 20px;
+			color: $white !important;
+			font-size: 1.35em;
+			text-align: center;
+			text-decoration: none !important;
+			
+			img {
+				width: 65px;
+				height: 65px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	._bottom-links {
+		li {
+			background: $blue-light;
+		}
+		a {
+			text-align: center;
+			color: $blue-dark !important;
+			font-weight: 700 !important;
+			text-decoration: none !important;
+			img {
+				width: 100%;
+			}
+			span {
+				padding: 20px 10px;
+			}
+		}
+	}
+}
