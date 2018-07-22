@@ -118,13 +118,15 @@
 		list-style:none !important;
 		padding-left: 0 !important;
 	}
-
+	
+	.prudential__red__section__content li,
 	.prudential__section--right li {
 		display: block;
 		position: relative;
 		padding: 3px 0 3px 30px !important;
 		margin-left: 20px;
 	}
+	.prudential__red__section__content li:before,
 	.prudential__section--right li:before {
 		content:"";
 		display: block;
@@ -136,6 +138,18 @@
 		top: 50%;
 		left:0;
 		transform:translateY(-50%);
+	}
+
+	.prudential__red__section__content ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.prudential__red__section__content li {
+		color: white;
+	}
+	.prudential__red__section__content li:before {
+		background: white;
 	}
 
 	/*red:#e8352d*/

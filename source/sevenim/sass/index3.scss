@@ -1,0 +1,133 @@
+$black: #1d1d1d;
+$white: #fff;
+$orange: #fa8119;
+$purple: #6768b1;
+$green: #227e8b;
+$pink: #dc277e;
+
+.sevenim {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	* {
+		box-sizing: border-box;
+	}
+	._top {
+	// 	padding: 15px 20px;
+		// background: $black;
+		border-bottom: 1px solid rgba($black, .2);
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	._logo {
+		display: block;
+		margin-right: 30px;
+		img {
+			width: 150px;
+		}
+	}
+	._tagline {
+		color: $green;
+		font-size: 1.5em;
+	}
+	._body {
+		display: flex;
+		overflow: hidden;
+		flex-wrap: wrap;
+		._item {
+			width: calc(100%/3);
+			padding: 40px 20px;
+			text-align: center;
+			border-right: 1px solid rgba($black, .2);
+			border-bottom: 1px solid rgba($black, .2);
+			&:first-child {
+				border-left: 1px solid rgba($black, .2);
+			}
+			@media (max-width: 767px) {
+				width: 50%;
+			}
+			@media (max-width: 480px) {
+				width: 100%;
+			}
+			&.-purple {
+				@media (max-width: 767px) {
+					width: 100%;
+				}
+			}
+			&:hover {
+				img {
+					transform: scale(1.2);
+				}
+			}
+		}
+		img {
+			width: 95px;
+			margin-bottom: 20px;
+			transition: all .2s ease-in-out;
+		}
+		._title {
+			text-transform: uppercase;
+			font-size: 1.35em;
+			color: $purple;
+		}
+		._text {
+			margin: 20px 0;
+		}
+
+	}
+	._bottom {
+		background: $black;
+		color: $white;
+		padding: 20px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		@media(max-width: 480px){
+			flex-wrap: wrap;
+		}
+		img {
+			width: 65px;
+		}
+		._text {
+			font-size: 1.35em;
+			margin: 10px 20px;
+		}
+	}
+	._link {
+		text-decoration: none !important;
+		color: $white !important;
+		display: inline-block;
+		background: $green;
+		border-radius: 35px;
+		padding: 15px 60px 15px 30px;
+		position: relative;
+		white-space: nowrap;
+		&:after {
+			content:"";
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			right: 30px;
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+			border-left: 7px solid $white;
+			transition: all .1s ease-in-out;
+		}
+		&.-pink {
+			color: $white !important;
+			background: $pink;
+			&:after {
+				border-left: 7px solid $white;
+			}
+		}
+		&:hover {
+			&:after {
+				transform: translate(3px, -50%);
+			}
+		}
+	}
+	a._telephone {
+		margin: 20px;		
+	}
+}
