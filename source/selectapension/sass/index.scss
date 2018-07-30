@@ -1,0 +1,199 @@
+$white: #fff;
+$black: #000;
+$orange: #ec681b;
+$light-green: #49bcc2;
+$grey: #6c6969;
+$green: #9bc43c;
+$purple: #6e529d;
+$blue: #2180b3;
+$pink: #cd3468;
+$navy: #3065a9;
+$dark-blue: #3f3f3f;
+
+.selectap {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	max-width: 1170px;
+	a._logo {
+		display: inline-block;
+		margin: 10px 0 20px;
+		img {
+			width: 300px;
+		}
+	}
+	._welcome {
+		font-weight: 700 !important;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid rgba($black, .1);
+	}
+	._title {
+		font-weight: 700;
+		font-style:italic;
+	}
+	._contact {
+		padding: 40px;
+		background: darken($blue, 30);
+		margin-bottom: 40px;
+		h2 {
+			margin: 0 !important;
+			padding: 0 !important;
+			color: $white !important;
+		}
+		p {
+			color: $white !important;
+		}
+		a {
+			color: $white !important;
+			font-weight: 700 !important;
+			text-decoration: none !important;
+		}
+	} 
+}
+
+.s_services {
+	margin: 20px 0;
+	._title {
+		margin-bottom: 20px;
+	}
+}
+
+.s_service {
+	margin-bottom: 20px;
+	position: relative;
+	a {
+		display: block;
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		span {
+			display: none;
+		}
+	}
+	._head {
+		display: flex;
+		padding: 20px;
+		position: relative;
+		overflow: hidden;
+		img {
+			width: 45px;
+			height: 45px;
+			margin: 0 20px 10px 0;
+		}
+		h2, h3 {
+			margin: 0 !important;
+			padding: 0 !important;
+			color: $white !important;
+		}
+		h2 {
+			font-size: 1.5em !important;
+			padding-bottom: 5px !important;
+			margin-bottom: 5px !important;
+			border-bottom: 1px solid rgba($black, .2);
+		}
+		h3 {
+			font-size: 1.1em !important;
+			font-weight: 100 !important;
+		}
+		&:before {
+			content:"";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 500px;
+			background: rgba($white,.1);
+			transform: rotate(30deg);
+		}
+	}
+	._body {
+		background: darken($white, 10);
+		padding: 20px;
+		overflow: hidden;
+		position: relative;
+		transition: all .2s ease;
+		&:after {
+			content: "";		
+			position: absolute;
+			top:-5px;
+			right: 10px;
+			border-right: 20px solid transparent;
+			border-left: 20px solid transparent;
+			border-top: 15px solid $black;
+			transition: all .2s ease;
+		}
+	}
+	&.-orange {
+		background: $orange;
+		._body {
+			&:after {
+				border-top-color: $orange;
+			}
+		}
+	}
+	&.-light-green {
+		background: $light-green;
+		._body {
+			&:after {
+				border-top-color: $light-green;
+			}
+		}
+	}
+	&.-grey {
+		background: $grey;
+		._body {
+			&:after {
+				border-top-color: $grey;
+			}
+		}
+	}
+	&.-green {
+		background: $green;
+		._body {
+			&:after {
+				border-top-color: $green;
+			}
+		}
+	}
+	&.-purple {
+		background: $purple;
+		._body {
+			&:after {
+				border-top-color: $purple;
+			}
+		}
+	}
+	&.-blue {
+		background: $blue;
+		._body {
+			&:after {
+				border-top-color: $blue;
+			}
+		}
+	}
+	&.-pink {
+		background: $pink;
+		._body {
+			&:after {
+				border-top-color: $pink;
+			}
+		}
+	}
+	&.-navy {
+		background: $navy;
+		._body {
+			&:after {
+				border-top-color: $navy;
+			}
+		}
+	}
+	&:hover {
+		._body {
+			&:after {
+				transform: translate(0, 5px);
+			}
+		}
+	}
+}
