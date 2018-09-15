@@ -1,0 +1,72 @@
+$blue: #0181b6;
+$black: #585858;
+$grey:#f5f5f5;
+
+$tablet:767px;
+
+$phablet:520px;
+
+#brooks {
+	color: $black;
+	font-family: "Cambria", "Georgia", sans-serif;
+	max-width: 1170px;
+	font-size: 16px;
+	* {
+		box-sizing: border-box;
+	}
+	._top {
+		background-color: $grey;
+		display: flex;
+		align-items: center;
+		padding: 60px 40px;
+		padding-right: 25%;
+		background-image: url(/images/brooks-bg.jpg);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		background-size: auto 100%;
+		box-shadow: 0 5px 10px rgba($black,.2);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-right: 50%;
+			background-size: auto 75%;
+		}
+		@media (max-width: $phablet) {
+			background-size: auto 50%;	
+		}
+		a {
+			display: block;
+			margin-right: 40px;
+			padding-right: 40px;
+			border-right: 2px solid $blue;
+			@media (max-width: $tablet) {
+				margin-bottom: 30px;
+				border-right: none;
+				padding-bottom: 20px;
+				border-bottom: 2px solid $blue;
+			}
+		}
+		img {
+			width: 200px;
+		}
+		._tagline {
+			font-weight: 500;
+			font-size: 1.2em;
+			@media (max-width: $phablet) { 
+				font-size: 1em;
+			}
+		}
+	}
+	._content h2 {
+		margin: 40px 40px 0;
+	}
+	.b_flex {
+		display: flex;
+		._half {
+			width: 50%;
+			padding: 20px 40px;
+		}
+	}
+
+}
+

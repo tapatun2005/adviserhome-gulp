@@ -1,7 +1,9 @@
+$orange:#f8a908;
+$blue: #002a5e;
+
 .a-contact {
 	margin-bottom: 40px;
 	width: 100%;
-	max-width: 296px;
     margin: 0 auto;
 	* {
 		box-sizing: border-box;
@@ -19,7 +21,7 @@
 		}
 	}
 	._text {
-		background: #002a5e;
+		background: $blue;
 		padding: 20px 40px;
 		text-align:center;
 		overflow: hidden;
@@ -36,9 +38,21 @@
 			color: white !important;
 			font-size: 1.4em !important;
 			font-weight: 700 !important;
+			transition: all .2s ease-in-out;
+			&.-orange {
+				background: $orange;
+				color: $blue !important;
+				&:hover {
+					background: #14e6f1;
+				}
+			}
 			&:hover {
 				color: #002a5e !important;
+				
 			}
 		}
+	}
+	._link {
+		margin-bottom: 20px;
 	}
 }
