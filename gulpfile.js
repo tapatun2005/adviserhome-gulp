@@ -1,4 +1,4 @@
-const folder = "brooks";
+const folder = "fundnetworks";
 const imagePath = "/cd-content/uploads/images/";
 
 
