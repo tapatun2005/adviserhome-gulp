@@ -14,6 +14,10 @@ $tablet: 768px;
 $phablet: 620px;
 $phone: 480px;
 
+.maincontent h1 {
+	display: none !important;
+}
+
 %fx {
 	display: flex;
 	flex-wrap: wrap;
