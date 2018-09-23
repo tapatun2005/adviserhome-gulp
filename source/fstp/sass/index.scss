@@ -1,0 +1,68 @@
+$black:#202020;
+$grey: #b9b8b7;
+$white: #fff;
+
+#fstp {
+	width: 100%;
+	max-width: 1450px;
+	* {
+		box-sizing: border-box;
+	}
+	._fx {
+		display: flex;
+		@media (max-width: 620px ) {
+			flex-direction: column;
+		}
+	}
+	._item1 {
+		display: flex;
+		direction: column;
+	}
+	._item-2 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background: url(/images/fstp-bg.jpg) no-repeat;
+		background-size: cover;
+		padding: 20px 50px;
+		font-size: 1.5em;
+		color: $white;
+		text-align: center;
+		font-weight: 700;
+		text-shadow: 0 0 10px rgba($black, .4);
+	}
+	._logo {
+		background: $black;
+		flex: 1 0 0;
+		padding: 10px 10px 0 0;
+		text-align: center;
+		img {
+			width: 100%;
+			max-width: 250px;
+			min-width: 200px;
+		}
+	}
+	._links {
+		flex: 1 0 auto;
+		background: $grey;
+		padding: 20px;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			padding: 5px 10px;
+		}
+	}
+	a {
+		font-family: "Times Roman" !important;
+		color: $black !important;
+		text-decoration: none !important;
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
+}

@@ -18,6 +18,15 @@ $phone:480px;
 	* {
 		box-sizing: border-box;
 	}
+	._top-new {
+		background: url(/images/brooks-new-bg.jpg);
+		background-size: cover;
+		padding: 40px 20px; 
+		img{
+			width:250px;
+		}
+
+	}
 	._top {
 		background-color: $grey;
 		display: flex;
