@@ -19,9 +19,9 @@ $phone:480px;
 		box-sizing: border-box;
 	}
 	._top-new {
-		background: url(/images/brooks-new-bg.jpg);
-		background-size: cover;
-		padding: 40px 20px; 
+		// background: url(/images/brooks-new-bg.jpg);
+		background: linear-gradient(to right, #0180b5 0%,#7fc0dc 100%);
+		padding: 10px; 
 		img{
 			width:250px;
 		}
@@ -79,7 +79,6 @@ $phone:480px;
 		}
 	}
 	._content h2 {
-		margin: 40px 40px 0;
 		font-family: "Cambria", "Georgia", sans-serif !important;
 		font-weight: 700 !important;
 		font-size: 1.35em !important;
@@ -121,7 +120,7 @@ $phone:480px;
 		flex-wrap: wrap;
 		justify-content: center;
 		div {
-			width: 50%;
+			width: 25%;
 			text-align: center;
 			padding: 5px;
 			@media(max-width: $tablet) {
