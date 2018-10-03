@@ -1,4 +1,4 @@
-const folder = "brooks";
+const folder = "dynamic-planner";
 const imagePath = "/cd-content/uploads/images/";
 
 
