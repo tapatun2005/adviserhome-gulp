@@ -1,0 +1,340 @@
+$black: #000;
+$white: #fff;
+$purple: #832460;
+$yellow: #d5a637;
+$orange: #bf583f;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#dplanner {
+	display: flex;
+	width: 100%;
+	max-width: 1170px;
+	padding: 10px;
+	font-family: "Roboto" !important;
+	border: 1px solid rgba($black, .1);
+	box-shadow: 0 10px 20px rgba($black, .3);
+	overflow: hidden;
+	@media (max-width: 992px){
+		flex-direction: column;
+	}
+	&, * {
+		box-sizing: border-box;
+	}
+	._content {
+		flex-grow: 1;
+		padding: 20px 40px;
+		@media(max-width: 550px){
+			padding: 5px;
+		}
+	}
+	._logo {
+		img {
+			width: 250px;
+		}
+	}
+	._tagline {
+		color: $purple;
+		font-size: 22px;
+		margin: 30px 0 10px;
+	}
+	._p {
+		line-height: 28px !important;
+		font-size: 16px !important;
+		color: rgba(black, .5) !important;
+		font-family: "Roboto" !important;
+	}
+	._links {
+		display: flex;
+		height: 255px;
+		@media(max-width: 1200px) {
+			margin-bottom: 40px;
+		}
+		@media(max-width: 767px) {
+			// flex-direction: column;
+			// justify-content: center;
+			// align-items: center;
+		}
+		@media(max-width: 680px) {
+			transform: translate(-140px);
+		}
+		@media(max-width: 585px) {
+			transform: translate(-90px);
+		}
+		@media(max-width: 350px) {
+			transform: translate(-73px);
+		}
+	}
+	._link {
+		display: block;
+		position: absolute;
+		font-family: "Roboto" !important;
+		&:hover {
+			svg {
+				transform: scale(1.1);
+			}
+		}
+		span {
+			display: block;
+			position: absolute;
+			white-space: nowrap;
+			left: 50%;
+			transform: translate(-50%);
+			top: -100%;
+			@media(max-width: 585px) {
+				font-size: 14px !important;
+			}
+			@media(max-width: 350px) {
+				font-size: 12px !important;
+			}
+		}
+		svg {
+			transition: transform .1s ease-in-out;
+			display: block;
+			@media(max-width: 585px) {
+				width: 48px;
+				height: 60px;
+			}
+			@media(max-width: 350px) {
+				width: 40px;
+				height: 50px;
+			}
+
+		}
+		&._link-1 {
+			top: 86.5%;
+			left: 39.5%;
+			transform: translate(-50%,-50%);
+			@media(max-width: 585px) { 
+				top: 75.5%;
+			}
+			@media(max-width: 350px) { 
+				top: 70.5%;
+			}
+			span {
+				color: $purple;
+			}
+		}
+		&._link-2 {
+			top: 50.5%;
+			left: 68.5%;
+			transform: translate(-50%,-50%);
+			span {
+				color: $yellow;
+			}
+		}
+		&._link-3 {
+			top: 50.5%;
+			left: 106.6%;
+			transform: translate(-50%,-50%);
+			span {
+				color: $orange;
+			}
+		}
+	}
+	._booklet {
+		flex-grow: 0;
+		text-align: center;
+		position: relative;
+		&:hover {
+			img {
+				transform: scale(1.05);
+			}
+		}
+		._title {
+			position: absolute;
+			top: 25px;
+			right: 100%;
+			font-size: 18px;
+			font-weight: 700;
+			white-space: nowrap;
+			transform-origin: top right;
+			transform: rotate(-90deg);
+			opacity: .35;
+		}
+		._img {
+			width: 235px;
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			img {
+				transition: transform .2s ease-in-out;
+				width: 100%;
+			}
+		}
+		a {
+			display: inline-block;
+			text-decoration: none !important;
+			color: $white !important;
+			padding: 10px 30px;
+			background: $purple;
+			border-radius: 25px;
+
+		}
+	}
+	._others {
+		width: 470px;
+		position: relative;
+		margin-top: 40px;
+		@media(max-width: 585px) {
+			// height: 320px;
+			width: 320px;
+		}
+		#dplanner-svg {
+			left: 100%;
+			top:50%;
+			position: absolute;
+			transform: translate(-45%, -50%);
+			z-index: -1;
+			width: 220%;
+			polygon {
+				transition: opacity .5s ease-in-out;
+				opacity: 0;
+			} 
+			// @media(max-width: 767px) {
+			// 	left: 82%;
+			// 	width: 290%;
+			// }
+		}
+		ul {
+			list-style: none !important;
+			margin: 0;
+			padding:0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			li {
+				margin: 14px;
+				text-align: center;
+				a {
+					color: $black !important;
+					font-size: 18px !important;
+					font-weight: 700 !important;
+					text-decoration: none !important;
+					&.-purple {
+						color: $purple !important;
+					}
+					&.-yellow {
+						color: $yellow !important;
+					}
+					&.-orange {
+						color: $orange !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+#dplanner-slider {
+	position: relative;
+	@media (max-width: 1200px) and (min-width: 992px){
+		display: none;
+	}
+	@media (max-width: 992px){
+		order:2;
+		z-index: 2;
+	}
+	ul {
+		list-style: none !important;
+		margin: 0;
+		padding:0;
+		left: 0;
+		width: 375px;
+		height: auto;
+		position: relative;
+		flex: 1 0 auto;
+		@media (max-width: 992px){
+			width: 100%;
+			display: flex;
+		}
+		@media (max-width: 420px) {
+			padding-top: 165%;		
+		}
+		li {
+			position: absolute;
+			top:0;
+			left: 0;
+			opacity: 1;
+			@media (max-width: 992px) and (min-width: 420px){
+				position: relative;
+				width: 50%;
+			}
+			img {
+				width: 100%;
+			}
+			span {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				font-size: 25px;
+				color: $white;
+			}
+			&:nth-child(1) {
+				animation: slide1 10s linear infinite;
+				@media (max-width: 992px) and (min-width: 420px){
+					animation: none;
+				}
+			}
+			&:nth-child(2) {
+				animation: slide2 10s linear infinite;
+				@media (max-width: 992px) and (min-width: 420px){
+					animation: none;
+				}
+			}
+		}
+	}
+	._before, ._after {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		color:$white;
+		font-size: 25px;
+		transition: all .2s ease-in-out;
+	} 
+	._after {
+		right: 20px;
+		left: auto;
+		animation: title2 10s linear infinite;
+		@media (max-width: 992px) and (min-width: 420px){
+			animation: none;
+		}
+	}
+	._before {
+		animation: title1 10s linear infinite; 
+		@media (max-width: 992px) and (min-width: 420px){
+			animation: none;
+		}
+	}
+}
+
+@keyframes slide1 {
+	0% {opacity: 1}
+	45% {opacity: 1}
+	50% {opacity: 0}
+	95% {opacity: 0}
+	100% {opacity: 1}
+}
+@keyframes slide2 {
+	0% {opacity: 0}
+	45% {opacity: 0}
+	50% {opacity: 1}
+	95% {opacity: 1}
+	100% {opacity: 0}
+}
+
+@keyframes title1 {
+	0% {opacity: 1}
+	45% {opacity: 1}
+	50% {opacity: 0}
+	95% {opacity: 0}
+	100% {opacity: 1}
+}
+@keyframes title2 {
+	0% {opacity: 0}
+	45% {opacity: 0}
+	50% {opacity: 1}
+	95% {opacity: 1}
+	100% {opacity: 0}
+}
+
