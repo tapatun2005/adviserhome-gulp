@@ -1,4 +1,4 @@
-const folder = "new-capital";
+const folder = "t-rowe-price";
 const imagePath = "/cd-content/uploads/images/";
 
 
