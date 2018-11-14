@@ -1,4 +1,4 @@
-const folder = "t-rowe-price";
+const folder = "brooks";
 const imagePath = "/cd-content/uploads/images/";
 
 
