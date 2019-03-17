@@ -1,0 +1,116 @@
+link(rel="stylesheet", href="css/index.css")
+
+
+#as
+	._header
+		a(href="https://www.aberdeenstandard.com/en/uk/adviser" title="Aberdeen Standard Investments Website" rel="nofollow" target="_blank")._logo
+			img(src="/images/as-logo.png", alt="Aberdeen Standard Investments Logo")
+		._tagline
+			._text
+				div Extraordinary Connection
+				div Connecting a world of expertise with you in mind
+			a(href="https://www.aberdeenstandard.com/en/uk/adviser" title="Aberdeen Standard Investments Website" rel="nofollow" target="_blank")
+				span.as-hidden Go to Aberdeen Standard Investments page
+
+	._content
+		div
+			h2 Who we are
+			p Welcome to the Aberdeen Standard Investments UK site for Advisers, which contains the information you need to service your clients effectively. Daily and historic prices and performance for all our UK funds are available plus relevant literature, such as Factsheets, KIIDs and reports. You can also access our tools and a wealth of thought leadership and market insight content.
+
+		div
+			img(src="/images/as-featured2.jpg", alt="Aberdeen Standard Investments")
+
+	._myfolio
+		div 
+			span
+		div
+			img(src="/images/as-image-1.jpg", alt="Aberdeen Standard Investments")
+		div
+			h3 MyFolio
+			p MyFolio is a flexible fund-of-funds investment solution. A 'fund of funds' is a fund made up of other collective investment funds rather than investing directly in stocks, bonds or other investments itself.
+			p MyFolio consists of 25 multi-asset, fund-of-funds, split into five ranges (three growth and two income) incorporating active and passive investment funds (passive funds track an index such as the FTSE 100 or FTSE All Share rather than pick individual stocks). For each range, we offer five individual funds that target a different level of risk (from lower risk through to higher risk). MyFolio is therefore a flexible, all-encompassing investment solution that allows you to choose funds based on a preferred investment style and attitude to risk.
+			a(href="https://www.aberdeenstandard.com/en/uk/adviser/my-folio" title="Aberdeen Standard Investments MyFolio" target="_blank" rel="nofollow") Find out more
+
+
+	ul#as-tabs
+		li(data-slide="0")
+			img(src="/images/as-image-2.jpg", alt="My Folio Lookthrough Tool")
+			a(href="#slide-0")._title My Folio Look Through Tool
+		li(data-slide="1")
+			img(src="/images/as-image-3.jpg", alt="Why it’s time to look at emerging markets for income")
+			a(href="#slide-1")._title Why it’s time to look at emerging markets for income
+		li(data-slide="2")
+			img(src="/images/as-image-4.jpg", alt="Corporate bonds – more to play for?")
+			a(href="#slide-2")._title Corporate bonds – more to play for?
+		li(data-slide="3")
+			img(src="/images/as-image-5.jpg", alt="Thinking Aloud")
+			a(href="#slide-3")._title Thinking Aloud
+
+	ul#as-slider
+		li#slide-0
+			._close &times;
+			div
+				img(src="/images/as-image-2.jpg", alt="My Folio Lookthrough Tool")
+			div
+				h3 My Folio Lookthrough Tool
+				p The MyFolio Lookthrough Tool has been designed to enable you to access performance, the latest fund updates and commentary quickly and easily, with options for flexible fund charting and creating customised client reports.
+				a(href="https://digital.feprecisionplus.com/AberdeenStandardInvestments-lookthroughtool " title="My Folio Look Through Tool" target="_blank" rel="nofollow") Find out more
+		li#slide-1
+			._close &times;
+			div
+				img(src="/images/as-image-3.jpg", alt="Why it’s time to look at emerging markets for income")
+			div
+				h3 Why it’s time to look at emerging markets for income
+				p Many investors have historically viewed emerging market (EM) equities as a source of growth, with income a distant consideration.
+				p We believe this oversight is a mistake, and that a dividend-focused approach to investing could help boost long-term total returns.
+				a(href="https://www.aberdeenstandard.com/en/uk/adviser/insights-thinking-aloud/article-page/why-its-time-to-look-at-emerging-markets-for-income" title="Why it’s time to look at emerging markets for income" target="_blank" rel="nofollow") Find out more
+		li#slide-2
+			._close &times;
+			div
+				img(src="/images/as-image-4.jpg", alt="Corporate bonds – more to play for?")
+			div
+				h3 Corporate bonds – more to play for?
+				p Most investors agree that, after the strong performance of corporate bonds (also called ‘credit’) in recent years, the environment has become more challenging and we are unlikely to enjoy such stellar returns in future. However, for investors with the resource and motivation to dig deep, global credit still offers plenty of potentially attractive long-term investment opportunities.
+				a(href="https://www.aberdeenstandard.com/en/uk/adviser/insights-thinking-aloud/article-page/corporate-bonds--more-to-play-for" title="Corporate bonds – more to play for?" target="_blank" rel="nofollow") Find out more
+		li#slide-3
+			._close &times;
+			div
+				img(src="/images/as-image-5.jpg", alt="Thinking Aloud")
+			div
+				h3 Thinking Aloud
+				p Find out our opinion on the economy and investment options, economic briefings and an outlook across the globe.
+				a(href="https://www.aberdeenstandard.com/en/uk/adviser/insights-thinking-aloud" title="Thinking Aloud" target="_blank" rel="nofollow") Our thinking
+
+
+script.
+	var tabs = document.querySelectorAll('#as-tabs li a');
+	var slides = document.querySelectorAll('#as-slider li');
+	var closes = document.querySelectorAll('#as-slider li ._close');
+
+	for(var i = 0; i < tabs.length; i++) {
+		tabs[i].addEventListener('click', function(){
+			var parent = this.parentNode;
+			var id = parseInt(parent.getAttribute('data-slide'));
+			for(var e = 0; e < slides.length; e++) {
+				slides[e].style.display = "none";
+				slides[e].style.opacity = '0';
+				tabs[e].parentNode.classList.remove('is-active');
+			}
+
+			slides[id].style.display = 'flex';
+			slides[id].style.opacity = '0';
+			parent.classList.add('is-active');
+			setTimeout(function(){
+				slides[id].style.opacity = '1';
+			}, 10);
+		});
+	}
+
+	for(var i = 0; i < closes.length; i++) {
+		closes[i].addEventListener('click', function(){
+			for(var e = 0; e < slides.length; e++) {
+				slides[e].style.display = "none";
+				tabs[e].parentNode.classList.remove('is-active');
+			}
+		});
+	}

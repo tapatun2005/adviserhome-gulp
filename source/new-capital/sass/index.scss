@@ -4,7 +4,7 @@ $white: #fff;
 
 
 #nc {
-	font-family: "Helvetica";
+	font-family: "Open Sans",helevetica,sans-serif !important;
 	width: 100%;
 	max-width: 1170px;
 	* {
@@ -44,7 +44,7 @@ $white: #fff;
 	}
 	._content {
 		display: flex;
-		margin: 20px 0 50px;
+		margin: 20px 0 20px;
 		@media(max-width: 767px) {
 			flex-direction: column;
 		}
@@ -159,6 +159,36 @@ $white: #fff;
 						display: none;
 					}
 				}
+			}
+		}
+	}
+	._history {
+		padding: 40px 0;
+		// margin: 10px 0;
+		border-top: 1px solid rgba(black, .2);
+		border-bottom: 1px solid rgba(black, .2);
+		margin-bottom: 20px;
+		._title {
+			color: $blue;
+			font-size: 1.5em;
+			margin: 0 0 30px;
+		}
+		ul {
+			list-style:none;
+			font-weight: 100;
+		}
+		li {
+			margin: 10px 0;
+			position: relative;
+			&:before {
+			  content: "";
+			  position: absolute;
+			  top:5px;
+			  left:-25px;
+			  width: 8px;
+			  height: 8px;
+			  border-radius: 50%;
+			  background: $red;
 			}
 		}
 	}

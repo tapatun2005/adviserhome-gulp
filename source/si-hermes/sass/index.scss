@@ -1,0 +1,425 @@
+$black: #1d1d1d;
+$white: #fff;
+
+$green: #15b596;
+$blue: #002f58;
+$turquoise: #1aa7b4;
+
+#si-hermes {
+	font-size: 18px;
+	width: 100%;
+	max-width: 750px;
+	font-family: "Helvetica", "Arial", sans-serif;
+	 
+	* {
+	 	box-sizing: border-box;
+	}
+
+	h2 {
+		font-size: 1.5em !important;
+	}
+
+	h2._top {
+		margin-top: 100px;
+	}
+	 
+	img {
+	 	max-width: 100%;
+	}
+
+	._header {
+		._top {
+			background: $blue;
+			padding: 10px 20px;
+			img {
+				width: 150px;
+			}
+		}
+		._featured {
+			background-image: url(/images/si-hermes-featured.jpg);
+			background-size: cover;
+			background-position: center;
+			color: $white;
+			position: relative;
+			padding: 40px;
+			line-height: 1.45em;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba($black, .35);
+			}
+
+			div {
+				position: relative;
+			}
+
+		}
+	}
+
+	._row {
+		display: flex;
+		margin: 40px 0;
+		
+		p {
+			font-size: 16px !important;
+		}
+
+		@media (max-width: 600px) {
+			flex-wrap: wrap;	
+		}
+
+	}
+
+	._col {
+		width: 50%;
+		
+		&:nth-child(2) {
+			padding: 0 40px;
+
+			@media (max-width: 600px) {
+				padding: 40px 0 0 0;
+			}
+				
+		}
+
+		@media (max-width: 600px) {
+			width: 100%;
+		}
+
+
+	}
+
+	._asset {
+		display: flex;
+		margin-bottom: 40px;
+		
+		._img {
+			margin-right: 20px;
+			width: 80px;
+		}
+
+		._title {
+			font-weight: 700;
+			font-size: 15px;
+			color: $turquoise;
+		}
+
+		._value {
+			font-size: 1.35em;
+			line-height: 1.3em;
+			color: lighten($black, 30);
+			span {
+				display: block;
+				font-size: 1.75em;
+			}
+		}
+
+	}
+
+	._video {
+
+		._about {
+			background: $green;
+			margin: 20px 0;
+			padding: 60px;
+			color: $white;
+			position: relative;
+
+			&:before {
+				content: ""; 
+				position: absolute;
+				border-right: 20px solid transparent;
+				border-left: 40px solid $green;
+				border-top: 60px solid transparent;
+				top: -60px;
+				right: 100px;
+			}
+
+		}
+
+		._title {
+			font-size: 20px;
+			font-weight: 700;
+		}
+
+	}
+
+	._pdfs {
+		display: flex;
+		justify-content: space-around;
+		margin: 20px 0 40px;
+
+		@media(max-width: 420px) {
+			display: block;	
+		}
+		
+		._pdf {
+			width: 25%;
+			position: relative;
+
+			@media(max-width: 420px) {
+				width: 175px;
+				margin: 0 auto 40px;
+			}
+			
+			& > img {
+				width: 100%;
+				display: block;
+				box-shadow: 10px 10px 20px rgba($black, .25);
+				transition: all .2s ease-in-out;
+			}
+
+			._icon {
+				width: 45px;
+				height: 45px;
+				border-radius: 50%;
+				background: $green; 
+				position: absolute;
+				top: 100%;
+				left: 0;
+				transform: translate(-50%, -50%);
+				box-shadow: 3px 3px 10px rgba($black, .25);
+				
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 25px;
+				}
+
+			}
+
+			a {
+				position: absolute;
+				display: block;
+				width: calc(100% + 25px);
+				height: calc(100% + 25px);
+				top: 0;
+				right: 0;
+				span {
+					display: none;
+				}
+
+			}
+
+			&:hover {
+
+				& > img {
+					transform: scale(1.1);
+				}
+
+			}
+
+
+		}
+
+	}
+
+
+	._podcast {
+		display: flex;
+		background: $blue;
+		margin: 60px 0 20px;
+		color: $white;
+		justify-content: space-between;
+		
+		._img {
+			margin-right: 40px;
+			
+			@media(max-width: 480px) {
+				display: none;
+			}
+
+
+			img {
+				width: 70px;
+			}
+		}
+
+		._content {
+			display: flex;
+			align-items: center;
+			padding: 20px;
+		}
+
+		._title {
+			font-weight: 700;
+			font-size: 1.2em;
+
+		}
+
+		a {
+			display: block;
+			background: $green;
+			position: relative;
+			width: 100px;
+			margin-left: 20px;
+
+			img {
+				width: 25px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+		}
+
+	}
+
+	._infographics {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
+
+		@media (max-width: 540px) {
+			display: block;
+		}
+
+		._item {
+			background: rgba($black, .1);
+			width: 48%;
+			display: flex;
+			box-shadow: 10px 10px 40px rgba($black, .25);
+			position: relative;
+
+			@media (max-width: 540px) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			&.-turquoise {
+				background: $turquoise;
+				
+				._img {
+					
+					img {
+						width: 65%;
+
+						@media (max-width: 540px) {
+							padding: 20px 0;
+						}
+
+					}
+
+				}
+
+				._title {
+					color: $white;
+				}
+
+			}
+			
+			._img,
+			._title {
+				flex: 1 0 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			._img {
+				align-items: center;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			._title {
+				padding: 10px 20px;
+				line-height: 1.3em;
+				img {
+					width: 30px;
+					display: block;
+					margin-bottom: 10px;
+				}
+			}
+
+			span {
+				display: none;
+			}
+
+			a {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0; 
+				left: 0;
+			}
+
+		}
+
+	}
+
+	._funds {
+	  display: flex;
+	  flex-wrap: wrap;
+	  margin-bottom: 100px;
+	}
+
+	._fund {
+	  cursor: pointer;
+	  flex: 1 0 20%;
+	  padding: 20px;
+	  border: 1px solid rgba($blue, .1);
+	  background: $green;
+	  box-shadow: inset 0 -5px 0px rgba(black, .2);
+	  ._title {
+	  	color: $white;
+	  	font-weight: 700;
+	  	text-align: center;
+	  }
+	  ._content {
+	    display: none;
+	  }
+	  &.is-active {
+	    background: $blue;
+	    box-shadow: none;
+	  }
+	}
+
+	#info {
+	  height: 0;
+	  overflow: hidden;
+	  flex: 1 0 100%;
+	  background: rgba($blue, 1);
+	  color: $white;
+	  & > div {
+	     padding: 40px;
+	  }
+
+	  a {
+	  	color: $green;
+	  	display: inline-block;
+	  	text-decoration: none !important;
+
+	  	&:hover {
+	  		color: $green;
+	  		text-decoration: none !important;
+	  	}
+
+	  	&:after {
+			content: "";
+			display: inline-block;
+			width: 12px;
+			height: 15px;
+			margin-left: 10px;
+			background: url(/images/si-hermes-arrow-2.png);
+			background-position: center;
+			background-size: 75% auto;
+			background-repeat: no-repeat;
+			transform: translate(0, 3px);
+	  	}
+
+	  }
+	}
+
+}

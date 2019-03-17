@@ -1,0 +1,203 @@
+$purple: #776690;
+$green: #00b3aa;
+
+#rathbone {
+	font-family: Helvetica;
+	font-size: 16px;
+	width: 100%;
+	max-width: 800px;
+	* {
+		box-sizing: border-box;
+	}
+	._article {
+		margin-top: 60px;
+	}
+	._featured {
+		background: url(/images/si-rathbone-featured.jpg);
+		background-size: cover;
+		background-position: center;
+		padding: 70px 40px 0 0;
+		margin-bottom: 40px;
+		@media(max-width: 480px) { 
+			padding: 50px 60px 0 0;
+		}
+		div {
+			font-size: 1.35em;
+			font-weight: 100 !important;
+			color: white;
+			width: 100%;
+			max-width: 400px;
+			background: rgba($purple,.95);
+			padding: 20px 40px;
+			@media(max-width: 480px) {
+				font-size: 1.2em;
+				padding: 20px;
+			}
+		}
+	}
+	p {
+		font-size: 14px;
+		a {
+			color: $purple !important;
+			text-decoration: underline !important;
+			font-weight: 700 !important;
+		}
+	}
+	h2 {
+		font-size: 1.5em !important;
+		font-weight: 700 !important;
+		color: $purple !important;
+	}
+	._row {
+		display: flex;
+		margin-left: -10px;
+		margin-right: -10px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+	}
+	._section {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+	._col {
+		flex: 1 0 0;
+		padding: 10px;
+		@media (max-width: 767px) {
+			flex: auto 0 0;
+			width: 100%;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+			width: 65%;
+			&._graph {
+				width: 100%;
+			}
+			&._logo {
+				width: 175px;
+			}
+		}
+		&.-purple {
+			background: $purple;
+			color: white;
+			padding: 20px 40px;
+			max-width: 340px;
+			@media (max-width: 767px) {
+				max-width: none;
+			}
+			h2 {
+				color: white !important;
+			}
+		}
+	}
+	._quote {
+		background: rgba(black, .1);
+		position: relative;
+		margin: 50px 0;
+		font-style: italic;
+		img {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		&.-big {
+			padding: 40px 150px 40px 60px;
+			font-size: 1.2em;
+			margin-bottom: 0;
+			padding-bottom: 40px;
+			border-bottom: 1px solid rgba(black,.05);
+			box-shadow: inset -10px 0 40px rgba(black, .1);
+			// background: $green;
+			@media (max-width: 480px) { 
+				font-size: 1.1em;
+				padding: 40px 150px 40px 40px;
+			}
+			img {
+				width: 150px;
+			}
+		}
+		&.-sm {
+			margin-top: 0;
+			padding: 10px 60px 40px 60px;
+			font-style: italic !important;
+			@media (max-width: 480px) { 
+				padding: 40px;
+			}
+			img {
+				width: 150px;
+				@media (max-width: 480px) { 
+					width: 110px;
+				}
+			}
+			p {
+				// opacity: .5;
+				font-size: 1.1em;
+				@media (max-width: 480px) { 
+					font-size: .9em;
+				}
+			}
+		}
+		&.-col {
+			font-size: 1.1em;
+		    padding: 40px;
+		    margin: 0px 20px;
+		}
+		._author {
+			font-size: 1.2em;
+			margin: 40px 0 0;
+			font-style: normal;
+			font-weight: 700;
+			color: $purple;
+			span {
+				display: block;
+				font-weight: 100;
+				font-size: .75em;
+			}
+		}
+	}
+	._video {
+		padding: 30px 60px 20px;
+		background: rgba(black, .1);
+
+		@media (max-width: 480px) { 
+			padding: 30px 40px 20px;
+		}
+		img {
+			width: 100%;
+		}
+		p {
+			margin-top: 0;
+		}
+	}
+
+	._diclaimer {
+		margin-top: 60px;
+		margin-bottom: 50px;
+		opacity: .5;
+		p {
+			font-size: .75em !important;
+		}
+		&:before {
+			content: "";
+			display: block;
+			height: 1px;
+			margin-bottom: 20px;
+			width: 150px;
+			background: rgba(black,.5);
+		}
+	}
+	.m-order-1 {
+		@media (max-width: 767px) {
+			order: 1;
+		}
+	}
+	.m-order-2 {
+		@media (max-width: 767px) {
+			order: 2;
+		}
+	}
+}
