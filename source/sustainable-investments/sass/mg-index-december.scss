@@ -1,0 +1,259 @@
+$dark-green: #00464a;
+$green: rgb(0,71,82);
+$white: #f7f6f3;
+
+.maincontent h1 {
+	color: $green !important;
+}
+
+.mg_si,
+.mg_si * {
+	box-sizing: border-box;
+	font-family: "Arial", sans-serif !important;
+}
+
+.mg_si {
+	h2 {
+		color: $green !important;
+		margin: 15px 0 !important;
+		font-size: 14pt !important;
+		font-weight: 700;
+		a {
+			color: $green !important;
+			text-decoration: underline !important;
+			font-weight: 700 !important;
+		}
+	}
+	p {
+		font-size: 12pt !important;
+		color: black !important;
+		a {
+			color: $green !important;
+			font-weight: 700 !important;
+		}
+	}
+	h3 {
+		color: $green !important;
+		margin: 10px 0 !important;
+		font-size: 12pt !important;
+		font-weight: 700;
+	}
+}
+
+.mg-si_video  {
+	margin: 40px 0;
+	img {
+		width: 100%;
+		box-shadow: 0 0 40px rgba(0,0,0,.3);
+	}
+}
+
+.mg-si_downloads {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+	div {
+		width: 30%;
+		min-width: 185px;
+		text-align: center;
+		@media (max-width: 620px) {
+			width: 100%;
+		}
+		img {
+			width: 100%;
+			max-width: 300px;
+			display: block;
+			margin: 0 auto;
+			box-shadow: 0 0 40px rgba(0,0,0,.3);
+		}
+		a {
+			margin: 10px 0;
+			color: white !important;
+			text-decoration: none !important;
+			display: inline-block;
+			padding: 10px 20px;
+			border-radius: 20px;
+			background: $dark-green;
+		}
+	}
+}
+
+.mg-si_videos {
+	div {
+		a {
+			width: auto;
+			margin: 10px 0;
+			color: white !important;
+			text-decoration: none !important;
+			display: inline-block !important;
+			padding: 10px 20px;
+			border-radius: 20px;
+			background: $dark-green;
+		}
+	}
+}
+
+.mg-si_interviews {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+	div {
+		width: 45%;
+		min-width: 185px;
+		padding: 20px 40px;
+		background: $white;
+		margin: 10px;
+		@media (max-width: 620px) {
+			width: 100%;
+		}
+		a {
+			text-decoration: none!important;
+			color: black !important;
+			font-weight: 700 !important;
+		}
+		h3 {
+			font-size: 1.3em !important;
+			color: $dark-green !important;
+		}
+		p {
+			color: $dark-green !important;
+			font-size: .9em !important;
+			a {
+				text-decoration: none!important;
+				color: black !important;
+			}
+		}
+	}
+}
+
+.mg_si_links {
+	a {
+		display: block;
+		padding: 10px 0;
+		color: black !important;
+		text-decoration: underline !important;
+		font-weight: 700 !important;
+	}
+}
+
+.mg-si_footer {
+	margin: 40px 0;
+	img {
+		width: 100%;
+	}
+}
+
+// Carousel
+._ms-carousel {
+	display: block;
+	width: 100%; 
+	height: 350px;
+	background: rgba(black,.15);
+	position: relative;
+	@media(max-width: 701px) {
+		height:580px;
+	}
+	ul {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		li {
+			position: absolute; 
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: all .35s ease-in-out;
+			&.is-active {
+				z-index: 1;
+				opacity: 1;
+				a img {
+					transform: rotateY(5deg);
+					@media(max-width: 701px) {
+						transform: none;
+					}
+				}
+			}
+		}
+	}
+	._navs {
+		& > div {
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			background: $green;
+			top: 50%;
+			color: white;
+			text-align:center;
+			line-height: 32px;
+			transform: translate(0, -50%);
+			z-index: 2;
+			cursor: pointer;
+			box-shadow: 0 0 10px rgba(black, .2);
+			@media(max-width: 701px) { 
+				top:25%;
+			}
+		}
+		#prev {
+			left: 10px;
+		}
+		#next {
+			right: 10px;
+		}
+	}
+}
+
+.mg-si_videos {
+	list-style: none;
+	margin:0;
+	padding: 0;
+	width: 100%;
+	margin: 50px 0;
+	&_title {
+		font-size: 1.35em;
+		font-weight: 700;
+	}
+	li {
+		display: flex;
+		padding: 0;
+		align-items: center;
+		width: 85%;
+		@media(max-width: 701px) {
+			display: block;
+		}
+		a {
+			display: block;
+			width: 50%;
+			margin-right: 50px;
+			perspective: 100px;
+			img {
+				width: 100%;
+				display: block;
+				transform: rotateY(0deg);
+				box-shadow: 0 0 40px rgba(black, .3);
+				transition: all .35s ease-in-out;
+				@media(max-width: 701px) {
+					transform: none;
+				}
+			}
+			@media(max-width: 701px) {
+				width: 100%;
+				margin: 0 0 15px 0;
+			}
+		}
+		& > div {
+			width: 50%;
+			a {
+				width: 100%;
+				text-align: center;
+			}
+			@media(max-width: 701px) {
+				width: 100%;
+			}
+		}
+	}
+	
+}

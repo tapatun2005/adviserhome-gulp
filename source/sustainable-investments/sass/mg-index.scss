@@ -18,6 +18,11 @@ $white: #f7f6f3;
 		margin: 15px 0 !important;
 		font-size: 14pt !important;
 		font-weight: 700;
+		a {
+			color: $green !important;
+			text-decoration: underline !important;
+			font-weight: 700 !important;
+		}
 	}
 	p {
 		font-size: 12pt !important;

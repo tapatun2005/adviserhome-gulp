@@ -32,7 +32,7 @@
                 stroke-width: 3;
                 stroke-miterlimit: 10;
             }
-                        @keyframes shortdash {
+            @keyframes shortdash {
                 from {
                     stroke-dashoffset: 70;
                 }

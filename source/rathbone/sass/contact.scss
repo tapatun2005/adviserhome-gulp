@@ -1,0 +1,77 @@
+$green: #00b2a9;
+$grey: #d5d5d5;
+
+.rb-logo {
+	margin-bottom: 20px;
+	img {
+		width: 100%;
+		max-width: 220px;		
+	}
+}
+
+.rb-contact {
+	display: flex;
+	flex-wrap: wrap;
+	._item {
+		background: $grey;
+		margin-bottom: 20px;
+		width: 100%;
+		max-width: 320px;
+	}
+	._text {
+		padding: 20px;
+	}
+	._name {
+		font-size: 2em;
+		color: rgba(0,0,0,.5);
+	}
+	p {
+		color: rgba(0,0,0,.5);
+		padding: 0;
+	}
+	._img {
+		text-align: right;
+		img {
+			width: 100%;
+			margin-top: -30px;
+		}
+	}
+	a {
+		text-decoration: none !important;
+		color: rgba(0,0,0,.5);
+		position: relative;
+		z-index: 1;
+		img {
+			width: 18px;
+			margin-right: 10px;
+		}
+	}
+}
+
+.rb-links {
+	margin: 40px 0;
+	background: #716184;
+	padding: 20px;
+	max-width: 320px;
+	color: white;
+	._title {
+		font-size: 1.35em;
+		margin-bottom: 20px;
+	}
+	a {
+		display: block;
+		margin-bottom: 20px;
+		background: #eaebea;
+		color: #716184;
+		text-decoration: none !important;
+		padding: 10px 20px;
+		text-align: center;
+		transition: all .2s ease-in-out;
+		font-weight: 700 !important;
+		&:hover {
+			background: #5b4b6b;
+			color: white;
+		}
+
+	}
+}
