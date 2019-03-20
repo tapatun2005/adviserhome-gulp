@@ -1,9 +1,9 @@
 $black: #1d1d1d;
 $white: #fff;
 
-$green: #15b596;
-$blue: #002f58;
-$turquoise: #1aa7b4;
+$green: #00b0b9;
+$blue: #003057;
+$turquoise: #00b0b9;
 
 #si-hermes {
 	font-size: 18px;
@@ -17,6 +17,7 @@ $turquoise: #1aa7b4;
 
 	h2 {
 		font-size: 1.5em !important;
+		color: $blue !important;
 	}
 
 	h2._top {
@@ -31,6 +32,7 @@ $turquoise: #1aa7b4;
 		._top {
 			background: $blue;
 			padding: 10px 20px;
+			margin-bottom: 40px;
 			img {
 				width: 150px;
 			}
@@ -166,13 +168,22 @@ $turquoise: #1aa7b4;
 				width: 175px;
 				margin: 0 auto 40px;
 			}
-			
-			& > img {
-				width: 100%;
-				display: block;
-				box-shadow: 10px 10px 20px rgba($black, .25);
-				transition: all .2s ease-in-out;
+
+			p {
+				font-size: .75em !important;
+				margin: 40px 0 20px;
 			}
+
+			._img {
+				position: relative;
+				img {
+					width: 100%;
+					display: block;
+					box-shadow: 10px 10px 20px rgba($black, .25);
+					transition: all .2s ease-in-out;
+				}
+			}
+			
 
 			._icon {
 				width: 45px;
@@ -210,7 +221,7 @@ $turquoise: #1aa7b4;
 
 			&:hover {
 
-				& > img {
+				._img > img {
 					transform: scale(1.1);
 				}
 

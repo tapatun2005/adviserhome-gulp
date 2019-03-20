@@ -1,4 +1,4 @@
-const folder = "rathbone";
+const folder = "si-hermes";
 const imagePath = "/cd-content/uploads/images/";
 
 
