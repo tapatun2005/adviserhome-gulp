@@ -1,4 +1,4 @@
-const folder = "si-hermes";
+const folder = "sustainable-investments";
 const imagePath = "/cd-content/uploads/images/";
 
 
