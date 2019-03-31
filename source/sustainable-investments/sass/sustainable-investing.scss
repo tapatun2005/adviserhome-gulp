@@ -76,6 +76,13 @@ ul.si-flex {
 					    background-image: url(/images/si-schroders-logo4.jpg);
 					}
 			}
+			&.-hermes {
+				background-image: url(/images/si-hermes-logo2.jpg);
+				@media (-webkit-min-device-pixel-ratio: 2), 
+					(min-resolution: 192dpi) { 
+					    background-image: url(/images/si-hermes-logo.jpg);
+					}
+			}
 		}
 		&:hover {
 			transform: scale(1.1);

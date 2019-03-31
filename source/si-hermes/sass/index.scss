@@ -373,7 +373,7 @@ $turquoise: #00b0b9;
 	._funds {
 	  display: flex;
 	  flex-wrap: wrap;
-	  margin-bottom: 100px;
+	  margin-bottom: 20px;
 	}
 
 	._fund {
@@ -431,6 +431,23 @@ $turquoise: #00b0b9;
 	  	}
 
 	  }
+	}
+
+
+	._disclaimer {
+		font-weight: 700;
+		margin-bottom: 80px;
+		position: relative;
+		padding-top: 20px;
+		&:before {
+			content: "";
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 150px;
+			height: 1px;
+			background: rgba($black, .25);
+		}
 	}
 
 }
