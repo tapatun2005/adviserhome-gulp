@@ -1,4 +1,4 @@
-const folder = "sustainable-investments";
+const folder = "prudential";
 const imagePath = "/cd-content/uploads/images/";
 
 
@@ -23,7 +23,7 @@ const gulp = require('gulp'),
 var dirs = getDirectories('source');
 
 gulp.task('default', function(callback){
-	runSequence('compile', 'watch', 'server', callback)
+	runSequence('compile', 'server', 'watch', callback)
 });
 gulp.task('compile', ['templates','styles', 'images']);      
 
