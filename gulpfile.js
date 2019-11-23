@@ -1,4 +1,4 @@
-const folder = "prudential";
+const folder = "seneca";
 const imagePath = "/cd-content/uploads/images/";
 
 
@@ -77,6 +77,8 @@ gulp.task('server', function () {
     }
   });
 });
+
+
 
 function getDirectories (srcpath) {
   return fs.readdirSync(srcpath)
