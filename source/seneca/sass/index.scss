@@ -62,6 +62,10 @@ html {
 			font-size: 1.25em;
 			font-weight: normal;
 			padding: 10px 35px;
+			transition: all .2s ease-in-out;
+			&:hover {
+				background: $purple;
+			}
 			@media(max-width: 992px) {
 				width: 100%;
 				margin: 10px 20px 0px 0;
@@ -248,7 +252,7 @@ html {
 				width: 100%;
 				margin-bottom: 40px;
 			}
-			img {
+			a.seneca-brochure-img-link {
 				display: block;
 				margin: 0 auto 20px;
 				width: 100%;
@@ -257,8 +261,22 @@ html {
 					max-width: 150px !important;
 				}
 			}
-			a {
-				color: $purple !important;
+			img {
+				display: block;
+				margin: 0 auto 20px;
+				width: 100%;
+				max-width: 250px !important;
+				transition: all .2s ease-in-out;
+
+				&:hover {
+					transform: scale(1.025);
+				}
+				@media (max-width: 575px) {
+					max-width: 150px !important;
+				}
+			}
+			a.seneca-brochure-text-link {
+				color: $purple;
 				padding: 10px 35px;
 				display: inline-block;
 				border: 2px solid $purple;
@@ -267,6 +285,13 @@ html {
 				border-radius: 8px;
 				font-size: 1.25em !important;
 				text-decoration: none !important;
+				transition: all .2s ease-in-out;
+
+				&:hover {
+					background: $purple;
+					color: $white;
+				}
+
 				@media (max-width: 575px) {
 					width: 225px;
 				}
@@ -287,6 +312,11 @@ html {
 		color: rgba($black, .5);
 		font-size: .9em !important;
 	}
+}
+
+.seneca-logo-link  {
+	display: inline-block;
+	width: 100%;
 }
 
 

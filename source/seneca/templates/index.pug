@@ -3,9 +3,10 @@ link(rel="stylesheet", href="css/index.css")
 #seneca
 	.seneca__content
 		.seneca__left
-			picture
-				source(media="(max-width: 480px)" srcset="/images/seneca-logo-mobile.png")
-				img(src="/images/seneca-logo.png" alt="Seneca | Multi-Asset Value Investing")
+			a(href="https://senecaim.com/" title="Seneca Investment Managers Website" target="_blank")
+				picture
+					source(media="(max-width: 480px)" srcset="/images/seneca-logo-mobile.png")
+					img(src="/images/seneca-logo.png" alt="Seneca | Multi-Asset Value Investing")
 
 			p Seneca Investment Managers is a fund management company specialising in multiasset investing. This form of investing combines traditional securities, such as equities and bonds, with non-traditional approaches, such as specialist investments* to deliver specific outcomes.
 
@@ -30,7 +31,8 @@ link(rel="stylesheet", href="css/index.css")
 		.seneca__right
 			.seneca__banner.-column
 				.seneca__banner-content
-					img(src="/images/seneca-logo-white.png", alt="Seneca | Multi-Asset Value Investing")
+					a(href="https://senecaim.com/" title="Seneca Investment Managers Website" target="_blank" class="seneca-logo-link")
+						img(src="/images/seneca-logo-white.png", alt="Seneca | Multi-Asset Value Investing")
 					p Widen your search for income and growth
 					._bottom
 						a(href="https://senecaim.com/" title="Seneca Investment Managers Website" target="_blank") www.senecaim.com
@@ -44,22 +46,26 @@ link(rel="stylesheet", href="css/index.css")
 		.seneca__books__list
 			
 			._item
-				img(src="/images/seneca-book-1.png", alt="Seneca White Paper" target="_blank")
-				a(href="https://senecaim.com/professional-investors/literature/" title="Seneca White Paper" target="_blank") Our White Paper
+				a(href="https://senecaim.com/professional-investors/literature/" title="Seneca White Paper" target="_blank" class="seneca-brochure-img-link") 
+					img(src="/images/seneca-book-1.png", alt="Seneca White Paper" target="_blank")
+				a(href="https://senecaim.com/professional-investors/literature/" title="Seneca White Paper" target="_blank" class="seneca-brochure-text-link") Our White Paper
 			
 			._item
-				img(src="/images/seneca-book-2.png", alt="Seneca Multi-Asset Value Investing" target="_blank")
-				a(href="https://senecaim.com/content/uploads/2019/06/SIM-MA-Brochure-V19.pdf" title="Seneca Multi-Asset Value Investing" target="_blank") Our Brochure
+				a(href="https://senecaim.com/content/uploads/2019/06/SIM-MA-Brochure-V19.pdf" title="Seneca Multi-Asset Value Investing" target="_blank" class="seneca-brochure-img-link")
+					img(src="/images/seneca-book-2.png", alt="Seneca Multi-Asset Value Investing" target="_blank")
+				a(href="https://senecaim.com/content/uploads/2019/06/SIM-MA-Brochure-V19.pdf" title="Seneca Multi-Asset Value Investing" target="_blank" class="seneca-brochure-text-link") Our Brochure
 
 			._item
-				img(src="/images/seneca-book-3.png", alt="Seneca Factsheets" target="_blank")
-				a(href="https://senecaim.com/professional-investors/literature/" title="Seneca Factsheets" target="_blank") Our Factsheets
+				a(href="https://senecaim.com/professional-investors/literature/" title="Seneca Factsheets" target="_blank")
+					img(src="/images/seneca-book-3.png", alt="Seneca Factsheets" target="_blank" class="seneca-brochure-img-link")
+				a(href="https://senecaim.com/professional-investors/literature/" title="Seneca Factsheets" target="_blank" class="seneca-brochure-text-link") Our Factsheets
 
 
 	.seneca__bottom
 		.seneca__banner.-row
 			.seneca__banner-content
-				img(src="/images/seneca-logo-white.png", alt="Seneca | Multi-Asset Value Investing")
+				a(href="https://senecaim.com/" title="Seneca Investment Managers Website" target="_blank" class="seneca-logo-link")
+					img(src="/images/seneca-logo-white.png", alt="Seneca | Multi-Asset Value Investing")
 				p Widen your search for income and growth
 				._bottom
 					a(href="https://senecaim.com/" title="Seneca Investment Managers Website" target="_blank") www.senecaim.com
