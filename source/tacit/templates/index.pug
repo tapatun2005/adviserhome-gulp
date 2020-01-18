@@ -1,0 +1,170 @@
+link(rel="stylesheet", href="css/index.css")
+
+.tacit
+	.tacit__welcome
+		._col--1
+			._logo
+				a(href="https://www.tacitim.com/" title="Tacit IM" target="_blank")
+					img(src="/images/tacit-logo.png", alt="Tacit IM Logo")
+			._p #[strong Tacit IM] is a high conviction investment manager focused entirely on the adviser market- it does not deal directly with investors preferring to concentrate on building long term relationships with a small number of professional advisers. 
+
+		._col--2
+			._video
+				iframe#youtube-video(width="100%" height="100%" src="https://www.youtube.com/embed/OEIKNot0IyE?rel=0&modestbranding=1&showinfo=0&controls=0&autoplay=" frameborder="0" allow="autoplay;" allowfullscreen)
+				._video--overlay#video-overlay(onclick="playTacitVideo()")
+					img(src="/images/tacit-video.jpg", alt="Tacit IM Strategies Video")
+					._button
+
+	.tacit__strategies
+
+		._title Tacit IM offers four risk rated portfolios
+		._list
+			
+			._list-item
+				._list-title Conservative
+				._list-p Aims to achieve a nominal total return greater than cash over five years or longer
+				a(href="https://www.tacitim.com/strategies#conservative" title="Conservative" target="_blank")
+					span Conservative
+
+			._list-item
+				._list-title Real Return
+				._list-p Aims to maintain the capital value of the portfolio in real terms over an investment cycle
+				a(href="https://www.tacitim.com/strategies#realreturn" title="Real Return" target="_blank")
+					span Real Return
+
+
+			._list-item
+				._list-title Steady Growth
+				._list-p Aims to grow the capital value of the portfolio
+				a(href="https://www.tacitim.com/strategies#steadygrowth" title="Steady Growth" target="_blank")
+					span Steady Growth
+
+
+			._list-item
+				._list-title Total Return
+				._list-p Aims to optimise the capital value of the portfolio
+				a(href="https://www.tacitim.com/strategies#totalreturn" title="Total Return" target="_blank")
+					span Total Return
+
+		._bottom
+			._bottom-p Details on all four strategies including Tacit IM and ARC performance comparison factsheets
+			a(class="_botton-link" href="https://www.tacitim.com/strategies" target="_blank" title="Strategies") Find out more
+
+
+
+	.tacit__awards
+		._title Awards and ratings
+		._list
+			
+			._img
+				img(src="/images/tacit-awards.jpg", alt="")
+			._list-item
+				._col-1 
+				._col-2 Defaqto 5 Diamond Rating
+				._col-3 for DFM MPS (Direct & Platform) Portfolio Family of services
+
+			._list-item
+				._col-1 Winner
+				._col-2 Best Overall Small Firm
+				._col-3 Citywire Wealth Manager Investment Performance Awards 2019
+
+			._list-item
+				._col-1 Finalist
+				._col-2 Investment Performance - Growth Portfolios
+				._col-3 PAM Awards 2019
+
+			._list-item
+				._col-1 Finalist
+				._col-2 Investment Performance - Defensive Portfolios
+				._col-3 PAM Awards 2019
+
+			._list-item
+				._col-1 
+				._col-2 ARC 3D 2019
+				._col-3 ARC Reasearch Limited
+
+			._list-item
+				._col-1 
+				._col-2 ARC 3D 2018
+				._col-3 ARC Reasearch Limited
+
+			._list-item
+				._col-1 Shortlisted
+				._col-2 Best Overall Small Firm
+				._col-3 Citywire Wealth Manager Investment Performance Awards 2018
+
+			._list-item
+				._col-1 Shortlisted
+				._col-2 Best Aggressive Portfolio
+				._col-3 Citywire Wealth Manager Investment Performance Awards 2018
+
+			._list-item
+				._col-1 Shortlisted
+				._col-2 Best Growth Portfolio
+				._col-3 Citywire Wealth Manager Investment Performance Awards 2018
+
+			._list-item
+				._col-1 Shortlisted
+				._col-2 Discretionary Fund Management Group of the Year
+				._col-3 Investment Week Awards 2018
+
+			._list-item
+				._col-1 Winner
+				._col-2 Best Overall Small Firm
+				._col-3 Citywire Wealth Manager Investment Performance Awards 2017
+
+			._list-item
+				._col-1 Shortlisted
+				._col-2 Best Aggressive Portfolio
+				._col-3 Citywire Wealth Manager Investment Performance Awards 2017
+
+			._list-item
+				._col-1 Shortlisted
+				._col-2 Discretionary Fund Management Group of the Year
+				._col-3 Investment Week Awards 2017
+
+			._list-item
+				._col-1 Shortlisted
+				._col-2 Best Balanced Portfolio
+				._col-3 Citywire Wealth Manager Investment Performance Awards 2016
+
+			._list-item
+				._col-1 Shortlisted
+				._col-2 Best Overall Small Firm
+				._col-3 Citywire Wealth Manager Investment Performance Awards 2016
+
+
+	.tacit__contact
+		._title Contact
+		._contact
+			._img
+				img(src="/images/tacit-person.png", alt="")
+			._content
+				._name Leigh Stephens 
+				._position Head of Strategic Relationships, Director
+				._telephone
+					._img-icon
+						img(src="/images/tacit-telephone.png", alt="")
+
+					a(href="tel: +44 (0)7458 033931") +44 (0)7458 033931
+				._telephone
+					._img-icon
+						img(src="/images/tacit-email.png", alt="")
+					a(href="mailto:leigh.stephens@tacitim.com") leigh.stephens@tacitim.com
+
+
+
+
+
+
+script.
+	function playTacitVideo() {
+
+		const video = document.querySelector('#youtube-video')
+		const videoOverlay = document.querySelector('#video-overlay')
+		
+		videoOverlay.classList.add('is-hidden')
+
+		video.setAttribute('src', video.getAttribute('src') + "1")
+
+	}
