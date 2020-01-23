@@ -1,4 +1,4 @@
-const folder = "tacit";
+const folder = "downing";
 const imagePath = "/cd-content/uploads/images/";
 
 
