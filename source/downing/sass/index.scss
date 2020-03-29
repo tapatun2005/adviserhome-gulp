@@ -131,8 +131,27 @@ body {
 		 			font-size: 16px !important;
 		 			line-height: 24px;
 		 			margin-top: 10px;
-		 			font-family: $font !important;
-		 		}
+					font-family: $font !important;
+					 
+					&._note {
+						padding-top: 10px;
+						margin-top: 20px;
+						font-size: 12px !important;
+						line-height: 14px;
+						opacity: .75;
+						position: relative;
+						&:before {
+							content: "";
+							width: 150px;
+							height: 1px;
+							background: rgba($black, 0.1);
+							top: 0;
+							left: 0;
+							position: absolute;
+							display: inline-block;
+						}
+					}
+				 }
 		 	}
 
 		 	img {
@@ -240,16 +259,17 @@ body {
 		padding: 80px 0;
 		position: relative;
 
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 40px;
-			width: 3px;
-			height: 70px;
-			transform: translate(0, -25%);
-			background: $black;
-		}
+		// &:before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 40px;
+		// 	width: 3px;
+		// 	height: 70px;
+		// 	transform: translate(0, -25%);
+		// 	background: $black;
+		// }
+
 		._title {
 			font-family: $font-title;
  			font-size: 44px;
@@ -506,7 +526,6 @@ body {
 	._disclaimer {
 		position: relative;
 		padding: 60px 40px 60px 40px;
-		margin-bottom: 80px;
 		&:before{
 			content: "";
 			position: absolute;
@@ -527,7 +546,13 @@ body {
 				color: $green;
 				font-family: $font !important;
 				font-weight: 700;
-				font-size: 14px;
+			// 	font-size: 14px;
+			}
+
+			&.-lg {
+				font-size: 16px !important;
+				line-height: 22px;
+				margin-bottom: 40px;
 			}
 		}
 

@@ -1,0 +1,58 @@
+$white: #fff;
+$black: #545f6b;
+$green: #0aaca9;
+$grey: #ebedf6;
+$pink: #d90e65;
+
+.maincontent h1 {
+	display: none;
+}
+
+.axa {
+	width: 100%;
+	max-width: 1170px;
+	font-family: "Helvetica", sans-serif;
+	margin: 0px auto 0;
+	color: $black;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	@media(max-width: 1199px) {
+		max-width: 970px;
+	}
+	@media(max-width: 991px) {
+		max-width: 750px;
+	}
+}
+
+
+.axa {
+	._header {
+		._logo {
+			img {
+				width: 200px;
+			}
+		}
+	}
+	._top__banner {
+		width: 100%;
+		position: relative;
+		padding-top: 20vw;
+		height: auto;
+		min-height: 175px;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 100%;
+			top: 50%;
+			left: 50%; 
+			transform: translate(-50%, -50%);
+			background: url('/images/axa__top-banner.jpg');
+			background-size: cover;
+		}
+	}
+}
