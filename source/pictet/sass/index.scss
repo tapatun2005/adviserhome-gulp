@@ -469,8 +469,14 @@ body {
             position: relative;
             background: #3d4a4d;
             max-width: 440px;
+            margin-top: -20px;
+            @media (min-width: 481px) {
+                margin-top: 0;
+            }
+
             ._text {
-                font-size: 1.75rem;
+                font-size: 1.75em;
+                line-height: 1.25em;
             }
 
             a {
