@@ -10,7 +10,7 @@ $font-title: 'Bitter', serif;
 #pru {
     width: 100%;
 	max-width: 1170px;
-	margin: 20px auto 0;
+	margin: 0px auto 100px;
 	font-family: $font;
 	font-size: 16px;
 	color: $black;
@@ -44,8 +44,8 @@ $font-title: 'Bitter', serif;
         background-position: 50% 50%;
         position: relative;
         &.-right {
-            justify-content: flex-end;
-            background-image: url('/images/pru-banner-2.jpg');
+            // justify-content: flex-end;
+            background-image: url('/images/pru-openwork-banner-image.jpg');
             background-position: 35% 50%;
         }
 
@@ -70,8 +70,10 @@ $font-title: 'Bitter', serif;
                 font-family: $font-title;
                 color: $grey-dark;
                 font-size: 38px;
+                line-height: 38px;
                 @media (max-width: 620px) {
                     font-size: 28px;
+                    font-size: 30px;
                 }
             }
 
@@ -302,7 +304,7 @@ $font-title: 'Bitter', serif;
 
         ._list {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
             margin: 40px 0 30px;
             @media (max-width: 600px){
@@ -319,7 +321,7 @@ $font-title: 'Bitter', serif;
             ._item {
                 background: $white;
                 border-radius: 5px;
-                width: 48%;
+                width: 75%;
                 position: relative;
                 overflow: hidden;
                 transition: all .2s ease-in-out;
