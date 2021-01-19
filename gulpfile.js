@@ -1,4 +1,4 @@
-const folder = "prudential";
+const folder = "bmo";
 const imagePath = "/cd-content/uploads/images/";
 
 
