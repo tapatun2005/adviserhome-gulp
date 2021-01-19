@@ -18,7 +18,7 @@ $red: #ee1d25;
     font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px !important;
 	max-width: 1170px;
-    margin: 0 auto 60px;
+    margin: 40px auto 60px;
     font-size: 16px;
 	* {
 		box-sizing: border-box;
@@ -41,6 +41,12 @@ $red: #ee1d25;
         }
         @media (min-width: 993px) {
             display: none;
+        }
+    }
+
+    ._header-banner {
+        img {
+            width: 100%;
         }
     }
 
@@ -281,9 +287,9 @@ $red: #ee1d25;
                 background-image: url('/images/bmo-banner-1.jpg');
             }
             &.-two {
-                background-image: url('/images/bmo-banner-2.jpg');
+                background-image: url('/images/bmo-banner-2-2.jpg');
                 @media (max-width: 620px) { 
-                    background-position: top left;
+                    background-position: center right;
                 }
             }
 
@@ -490,17 +496,19 @@ $red: #ee1d25;
         ._link {
             text-decoration: none !important;
             color: $white;
-            width: 55px;
-            height: 55px;
+            // width: 55px;
+            // height: 55px;
+            display: inline-block;
             text-align: center;
-            line-height: 55px;
+            // line-height: 55px;
+            padding: 15px 35px;
             display: block;
-            background: $red;
-            border-radius: 50%;
+            background: $blue;
+            border-radius: 25px;
             transition: all .2s ease-in-out;
 
             &:hover {
-                background: darken($red, 10);
+                background: darken($blue, 10);
             }
         }
     }
@@ -558,6 +566,21 @@ $red: #ee1d25;
                     }
                 }
             }
+        }
+    }
+
+    ._disclaimer {
+        margin-top: 20px;
+        padding-top: 20px;
+        font-size: 12px;
+        color:rgba($black, .45);
+        &:before {
+            content:'';
+            width: 150px;
+            height: 1px;
+            display: block;
+            margin-bottom: 20px;
+            background: rgba($black, .1);
         }
     }
 
