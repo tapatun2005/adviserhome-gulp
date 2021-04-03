@@ -307,6 +307,14 @@ $red: #ee1d25;
                 }
             }
 
+            &.-five {
+                background-image: url('/images/bmo-banner-5.jpg');
+                @media (max-width: 620px) { 
+                    background-position: right center;
+                    background-size: cover;
+                }
+            }
+
             @media (max-width: 620px) { 
                 position: relative;
                 width: 100%;

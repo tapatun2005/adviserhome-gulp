@@ -1,4 +1,4 @@
-const folder = "bmo";
+const folder = "momentum";
 const imagePath = "/cd-content/uploads/images/";
 
 
