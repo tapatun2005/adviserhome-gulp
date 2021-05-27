@@ -1,0 +1,436 @@
+$black: #454c50;
+$grey-dark: #3a6270;
+$red: #c00;
+$grey: #f5f6f6;
+$white: #fff;
+$font: 'Helvetica', 'Arial', sans-serif;
+$font-title: 'Bitter', serif;
+
+
+#pru {
+    width: 100%;
+	max-width: 1170px;
+	margin: 0px auto 100px;
+	font-family: $font;
+	font-size: 16px;
+	color: $black;
+
+    * {
+		box-sizing: border-box;
+	}
+
+	@media(max-width: 1199px) {
+		max-width: 970px;
+	}
+	@media(max-width: 991px) {
+		max-width: 750px;
+    }
+    
+
+    ._logo {
+       width: 205px;
+       margin: 0 auto 20px;
+        img {
+            width: 100%;
+        }
+    }
+
+    ._banner {
+        display: flex;
+        padding-top: 100px;
+        padding-bottom: 150px;
+        background-image: url('/images/pru-family-hero.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        position: relative;
+        &.-right {
+            // justify-content: flex-end;
+            background-image: url('/images/pru-openwork-banner-image.jpg');
+            background-position: 35% 50%;
+        }
+
+        @media (max-width: 620px) {
+            padding-top: 275px;
+            padding-bottom: 60px;
+        }
+
+        ._content {
+            background: rgba(white,.85);
+            width: 50%;
+            margin: 0 40px 0;
+            padding: 40px;
+
+            @media (max-width: 620px) {
+                width: auto;
+                margin: 0 10px 0;
+                padding: 30px 40px;
+            }
+
+            ._title {
+                font-family: $font-title;
+                color: $grey-dark;
+                font-size: 38px;
+                line-height: 38px;
+                @media (max-width: 620px) {
+                    font-size: 28px;
+                    font-size: 30px;
+                }
+            }
+
+            ._text {
+                margin: 20px 0 40px;
+                color: $grey-dark;
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 100;
+                @media (max-width: 620px) {
+                    font-size: 15px;
+                    margin: 15px 0 25px;
+                    line-height: 20px;
+                }
+            }
+            
+            a {
+                display: inline-block;
+                padding: 10px 15px 10px 25px;
+                border-radius: 5px;
+                text-decoration: none !important;
+                color: $white;
+                position: relative;
+                background: $red;
+                transition: all .2s ease-in-out;
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    margin-left: 10px;
+                    width: 8px;
+                    height: 10px;
+                    background-image: url(/images/pru-arrow-white.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: auto 100%;
+                }
+                &:hover {
+                    background: darken($red, 10);
+                }
+            }
+        }
+
+        ._bottom {
+            background: transparent;
+            bottom: 0;
+            display: block;
+            height: 40px;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+
+            &:before {
+                content: "";
+                background: $grey;
+                bottom: 0;
+                display: block;
+                height: 100%;
+                left: 0;
+                margin-left: -40px;
+                position: absolute;
+                width: 50%;
+            }
+
+            &:after {
+                background: $grey;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 100%;
+                margin-right: -40px;
+                right: 0;
+                position: absolute;
+                width: 50%;
+            }
+
+            ._triangles {
+                background: transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 40px;
+                left: 50%;
+                margin-left: -40px;
+                position: absolute;
+                width: 80px;
+
+                &:before,
+                &:after {
+                    background: transparent;
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-top: 40px solid transparent;
+                    border-bottom: 40px solid transparent;
+                    position: absolute;
+                    top: 0;
+                }
+
+                &:after {
+                    right: 0;
+                    border-right: 40px solid $grey;
+                }
+    
+                &:after {
+                    left: 0;
+                    border-left: 40px solid $grey;
+                }
+            }
+        }
+    }
+
+
+    ._oracle {
+        padding: 60px 40px;
+        background: $grey;
+        ._content {
+            padding: 10px;
+            display: flex;
+            background: $white;
+            border: 1px solid darken($grey, 4);
+            border-radius: 5px;
+            transition: all .2s ease-in-out;
+
+            @media (max-width: 720px) {
+                flex-direction: column-reverse;
+            }
+            ._col {
+                background: $grey;
+                width: 50%;
+                position: relative;
+
+                @media (max-width: 720px) { 
+                    width: 100%;
+                }
+
+                &:first-child {
+                    padding: 40px;
+                }
+
+                &:last-child {
+                    @media (max-width: 720px) {
+                        height: 100px;
+                    }
+                }
+
+                ._title {
+                    font-family: $font-title;
+                    color: $grey-dark;
+                    font-size: 32px;
+                }
+                ._text {
+                    margin: 20px 0 40px;
+                }
+
+                a {
+                    display: inline-block;
+                    padding: 10px 15px 10px 25px;
+                    border-radius: 5px;
+                    border: 1px solid darken($grey, 10);
+                    text-decoration: none !important;
+                    color: $black;
+                    position: relative;
+                    background: darken($grey, 2);
+                    transition: all .2s ease-in-out;
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        margin-left: 10px;
+                        width: 8px;
+                        height: 10px;
+                        background-image: url(/images/pru-arrow.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: auto 100%;
+                    }
+                    &:hover {
+                        background: $white;
+                    }
+                }
+
+                ._img {
+                    position: relative;
+                    overflow: hidden;
+                    height: 100%;
+                    img {
+                        height: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(1);
+                        transition: transform 7s ease-in-out;
+                        @media (max-width: 720px) {
+                            height: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 10px 40px rgba($black, .1);
+                ._col {
+                    ._img {
+                        img {
+                            transform: translate(-50%, -50%) scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ._webinars {
+        background: darken($grey, 3);
+        border-top: 1px solid darken($grey, 10);
+        padding: 60px 40px;
+        ._title {
+            font-size: 32px;
+            color: $grey-dark;
+            font-family: $font-title;
+            text-align: center;
+        }
+        ._text {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        ._list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0 30px;
+            @media (max-width: 600px){
+                justify-content: center;
+            }
+            ._item_title {
+                display: block;
+                padding: 20px;
+                color: $red;
+                font-family: $font-title;
+                text-align: center;
+                font-size: 18px;
+            }
+            ._item {
+                background: $white;
+                border-radius: 5px;
+                width: 75%;
+                position: relative;
+                overflow: hidden;
+                transition: all .2s ease-in-out;
+
+                @media (max-width: 600px){
+                    width: 100%;
+                    max-width: 275px;
+                    margin-bottom: 20px;
+                }
+
+                ._img {
+                    width: 100%;
+                    height: 150px;
+                    position: relative;
+                    overflow: hidden;
+
+                    @media (max-width: 992px){
+                        height: 100px;
+                    }
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    span {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 10px 40px rgba($black, .2);
+                }
+            }
+        }
+    }
+
+    ._about {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $grey;
+        padding: 40px;
+        flex-wrap: wrap;
+        ._col {
+            &:first-child {
+                width: 65%;
+                @media(max-width: 500px) {
+                    width: 100%;
+                }
+            }
+            &:last-child {
+                text-align: center;
+                width: 30%;
+                @media(max-width: 500px) {
+                    width: 100%;
+                    margin-top: 40px;
+                }
+                img {
+                    width: 100%;
+                    max-width: 100px;
+                }
+            }
+        }
+
+        ._title {
+            font-family: $font-title;
+            font-size: 28px;
+            color: $grey-dark;
+        }
+        ._text {
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        a {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 15px 10px 25px;
+            border-radius: 5px;
+            border: 1px solid darken($grey, 10);
+            text-decoration: none !important;
+            color: $black;
+            position: relative;
+            background: darken($grey, 2);
+            transition: all .2s ease-in-out;
+            &:after {
+                content: "";
+                display: inline-block;
+                margin-left: 10px;
+                width: 8px;
+                height: 10px;
+                background-image: url(/images/pru-arrow.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: auto 100%;
+            }
+            &:hover {
+                background: $white;
+            }
+        }
+    }
+}

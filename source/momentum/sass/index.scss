@@ -1,24 +1,26 @@
-$white: #fff;
-$black: #000;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-$green: #337a80;
-$purple: #692163;
+$white: #fff;
+$black: #4a4a4a;
+
+$blue: #041f4b; 
+$red: #da0813;
 
 
 html {
 	scroll-behavior: smooth;
 }
 
-.maincontent h1 {
-	display: none !important;
+#intro {
+	display: none;
 }
 
-#seneca {
+#momentum {
 	width: 100%;
-	max-width: 900px;
+	max-width: 1170px;
 	margin: 0 auto;
-	font-family: 'Helvetica', 'Arial', sans-serif;
-
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+	color: $black;
 	* {
 		box-sizing: border-box;
 	}
@@ -29,325 +31,265 @@ html {
 	img {
 		max-width: 100%;
 	}
-
-	p {
-		&.-note {
-			font-size: .85em !important;
-			opacity: .5;
-		}
-	}
 }
 
-.seneca__top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 20px;
-	img {
-		width: 300px;
-	}
-}
-
-.seneca__content {
-	display: flex;
-	margin-bottom: 40px;
-	padding-bottom: 40px;
-	border-bottom: 2px solid $purple;
-
-	&-links {
-		display: flex;
-		// justify-content: space-between;
-		width: calc(100% + 20px);
-		text-align: center;
-		@media(max-width: 500px) {
-			flex-wrap: wrap;
-		}
-		a {
-			margin: 20px 20px 0px 0;
-			border-radius: 5px;
-			display: inline-block;
-			// background: $green;
-			background: rgba($black, .2);
-			color: $white !important;
-			text-decoration: none !important;
-			font-size: 1em;
-			font-weight: normal;
-			padding: 10px 35px;
-			transition: all .2s ease-in-out;
-			&:hover {
-				background: $purple;
-			}
-			@media(max-width: 992px) {
-				width: 100%;
-				margin: 10px 20px 0px 0;
-			} 
-		}
-	}
-}
-
-.seneca__left {
-	margin-left: 80px;
-	width: 100%;
-	@media(max-width: 992px) {
-		margin-left: 0px;
-	}
-
-	._title {
-		color: $green;
-		font-size: 24px;
-		font-weight: bold !important;
-		margin-bottom: 20px;
-	}
-
-	picture  {
-		display: block;
-		margin-bottom: 40px;
-	}
-}
-
-.seneca__right {
-	width: 450px;
-	
-	@media(max-width: 992px) {
-		display: none;
-	}
-}
-
-.seneca__banner {
-	
-	background: url('/images/seneca-background.jpg');
-	background-size: cover;
-	background-position: center;
-	overflow: hidden;
-	position: relative;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	flex-direction: column;
-
-	&.-row {
-		@media(min-width: 520px) {
-			flex-direction: row;
-			background-position: right bottom;
-		}
-	}
-
-	&.-column {
-		height: 100%;	
-	}
-
-	&-content {
-		background: $green;
-		position: relative;
-		padding: 0 20px 20px;
-		& > * {
-			position: relative;
-			z-index: 1;
-		}
-
-		&:before,
-		&:after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: $green;
-			transform: skewY(20deg);
-			transform-origin: top right;
-			z-index: 0;
-		}
-		&:before {
-			background: $purple;
-			transform: skewY(20deg) translateY(-8px);
-		}
-
-		img {
-			display: block;
-
-			width: 75%;
-			margin: -20px auto 0; 
-		}
-
-		p {
-			text-align: center;
-			font-weight: bold !important;
-			padding: 0 !important;
-			font-size: 20px !important;
-			margin: 40px 0 !important;
-			color: $white !important;
-		}
-
-		._bottom {
-			display: flex;
-			justify-content: space-between;
-			a {
-				display: inline-block;
-				font-size: .85em !important;
-				color: $white;
-				text-decoration:  none !important;
-			}
-		}
-
-		a {
-			span {
-				display: none;
-			}
-		}
-	}
-
-	a.seneca__banner_link {
-		cursor: pointer;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		span {
-			display: none;
-		}
-	}
-
-	&.-row {
-		
-		@media(min-width: 520px) {
-			
-			.seneca__banner-content {
-
-				padding: 20px 0;
-
-				img {
-					margin: 0 auto;
-				}
-
-				p {
-					width: 75%;
-					margin: 40px auto 20px !important;
-				}
-				
-				&:before,
-				&:after {
-					transform: skew(-20deg, 0);
-					transform-origin: top left;
-				}
-				&:before { 
-					transform: skew(-20deg, 0) translate(-8px, 0);
-				}
-
-				._bottom {
-					max-width: 75%;
-					margin: 0 auto;
-				}
-			}
-
-		}
-
-		@media(max-width: 519px) {
-
-			display: block;
-			
-			.seneca__banner-content {
-				margin-top: 350px;
-				max-width: 100%;
-			}
-
-		}
-
-	}
-}
-
-
-.seneca__books {
-	text-align: center;
-	&__title {
-		color: $purple;
-		font-size: 24px;
-	}
-	&__list {
-		margin: 40px 0;
+.momentum {
+	&__head {
 		display: flex;
 		justify-content: space-between;
-		width: calc(100% + 20px);
-
-		@media (max-width: 575px) {
-			flex-wrap: wrap;
+		align-items: center;
+		padding: 0 20px;
+		@media (max-width: 620px) {
+			display: block;
 		}
+		._logo {
+			width: 330px;
+			margin-left: -25px;
+		}
+		._tagline {
+			font-weight: bold;
+			font-size: 30px;
+			color: $blue;
 
-		._item {
-			margin-right: 20px;
-			margin-bottom: 40px;
-
-			@media (max-width: 575px) {
-				width: 100%;
-				margin-bottom: 40px;
-			}
-			a.seneca-brochure-img-link {
-				display: block;
-				margin: 0 auto 20px;
-				width: 100%;
-				max-width: 250px !important;
-				@media (max-width: 575px) {
-					max-width: 150px !important;
-				}
-			}
-			img {
-				display: block;
-				margin: 0 auto 20px;
-				width: 100%;
-				max-width: 250px !important;
-				transition: all .2s ease-in-out;
-
-				&:hover {
-					transform: scale(1.025);
-				}
-				@media (max-width: 575px) {
-					max-width: 150px !important;
-				}
-			}
-			a.seneca-brochure-text-link {
-				color: $purple;
-				padding: 10px 35px;
-				display: inline-block;
-				border: 2px solid $purple;
-				background: $white;
-				width: 100%;
-				border-radius: 8px;
-				font-size: 1.25em !important;
-				text-decoration: none !important;
-				transition: all .2s ease-in-out;
-
-				&:hover {
-					background: $purple;
-					color: $white;
-				}
-
-				@media (max-width: 575px) {
-					width: 225px;
-				}
+			span:nth-child(1) {
+				color: $red;
 			}
 		}
 	}
 }
 
-.seneca__bottom {
-	padding-bottom: 30px;
-	margin-bottom: 100px;
-	// border-bottom: 2px solid $purple;
-}
-
-.seneca__disclaimer {
-	margin-bottom: 40px;
+.momentum__content {
+	margin-bottom: 80px;
+	margin-top: 40px;
+	padding: 0 20px;
 	p {
-		color: rgba($black, .5);
-		font-size: .9em !important;
+		font-size: 16px !important;
+		line-height: 24px !important;
+		margin-bottom: 30px;
 	}
 }
 
-.seneca-logo-link  {
-	display: inline-block;
-	width: 100%;
+.momentum__col {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+	& > div {
+		width: 50%;
+		padding: 0 20px;
+
+		@media (max-width: 620px) {
+			width: 100%;
+		}
+
+		h2 {
+			margin-top: 0;
+			color: $blue;
+			font-size: 28px;
+			@media (max-width: 620px) {
+				margin-top: 20px;
+			}
+		}
+		img {
+			width: 100%;
+		}
+		p {
+			font-size: 16px !important;
+			line-height: 24px !important;
+		}
+	}
+
+	&.-right {
+		._img {
+			@media (min-width: 621px) {
+				order: 1;
+			}
+		}
+	}
 }
 
+.momentum__news {
 
+	margin-bottom: 60px;
+
+	h2 {
+		color: $blue;
+		text-align: center;
+	}
+
+	._news {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media (max-width: 480px) {
+			display: block;
+		}
+
+		li {
+			width: calc(100%/3);
+			padding: 20px;
+			text-align: center;
+
+			@media (max-width: 480px) {
+				width: 100%;
+			}
+
+			h3 {
+				color: $blue;
+				font-size: 20px;
+			}
+			._img {
+				width: 100%;
+				height: 175px;
+				overflow: hidden;
+				margin-bottom: 20px;
+				img {
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			&._brochure {
+				._img {
+					height: auto;
+					img {
+						object-fit: inherit;
+						height: auto;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.momentum__contacts {
+	padding: 0 20px;
+	h2 {
+		color: $blue;
+		text-align: center;
+	}
+	&__grid {
+		display: flex;
+		margin: 40px 0;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		@media (max-width: 620px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		._map {
+			width: 300px;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__people {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin: 0; 
+		list-style: none;
+		width: 66%;
+		li {
+			width: 50%;
+			padding: 0 20px;
+			margin-bottom: 30px;
+
+			@media(max-width: 992px) {
+				width: 100%;
+			}
+
+			@media (max-width: 620px) {
+				padding: 0;
+				text-align: center;
+			}
+
+			._name {
+				font-size: 18px !important;
+				font-weight: bold;
+				color: $blue;
+			}
+
+			._position {
+				font-size: 13px;
+				margin-top: 5px;
+			}
+
+			._contacts {
+				margin: 10px 0 0 0;
+				@media (max-width: 620px) {
+					display: flex;
+					justify-content: center;
+				}
+				a {
+					display: flex;
+					text-decoration: none;
+					margin-top: 5px;
+
+					@media (max-width: 620px) {
+						justify-content: center;
+					}
+
+					._icon {
+						width: 22px;
+						margin-right: 10px;
+					}
+
+					._text {
+						color: rgba($black, .5);
+						font-size: 14px;
+						text-decoration: none;
+						@media (max-width: 620px) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.momentun__btn {
+	display: inline-block;
+	border: 1px solid $black;
+	padding: 15px 35px;
+	border-radius: 35px;
+	text-decoration: none;
+	color: $red;
+	transition: all .2s ease-in-out;
+	font-size: 16px !important;
+
+	&:hover {
+		border-color: $red;
+		color: $red;
+		text-decoration: none;
+	}
+}
+
+.momentum__disclaimer {
+	margin: 0 0 40px 0;
+	padding: 0 20px;
+	&:before {
+		content: "";
+		width: 250px;
+		height: 1px;
+		display: block;
+		background: rgba($black, .1);
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 12px !important;
+		color: rgba($black, .35);
+		line-height: 15px !important;
+		a {
+			color: rgba($black, .35) !important;
+		}
+	}
+}
