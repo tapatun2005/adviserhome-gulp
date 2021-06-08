@@ -1,4 +1,4 @@
-const folder = "sustainable-investments";
+const folder = "axa-im";
 const imagePath = "/cd-content/uploads/images/";
 
 
