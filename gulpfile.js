@@ -1,4 +1,4 @@
-const folder = "sustainable-investments";
+const folder = "10-years";
 const imagePath = "/cd-content/uploads/images/";
 
 
