@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$white: #fff;
+$black: #4a4a4a;
+$grey: #b3b1b1;
+
+$blue: #041f4b; 
+$red: #da0813;
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+#intro {
+	display: none;
+}
+
+#momentum {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+	color: $black;
+	* {
+		box-sizing: border-box;
+	}
+
+	@media(max-width: 992px) {
+		max-width: 780px;
+	}
+	img {
+		max-width: 100%;
+	}
+}
+
+.momentum {
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20px;
+		@media (max-width: 620px) {
+			display: block;
+		}
+		._logo {
+			width: 330px;
+			margin-left: -25px;
+		}
+		._tagline {
+			font-weight: bold;
+			font-size: 30px;
+			color: $blue;
+
+			span:nth-child(1) {
+				color: $red;
+			}
+		}
+
+		._cta {
+			a {
+				display: inline-block;
+				padding: 10px 25px;
+				background-color: $white;
+    			color: $red;
+    			border: 1px solid $grey;
+				min-width: 150px;
+				height: 55px;
+				padding: 14px 30px 16px;
+				border-radius: 28px;
+				font-weight: 500;
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.momentum__content {
+	margin-bottom: 80px;
+	margin-top: 40px;
+	padding: 0 20px;
+	p {
+		font-size: 16px !important;
+		line-height: 24px !important;
+		margin-bottom: 30px;
+	}
+}
+
+.momentum__col {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+	& > div {
+		width: 50%;
+		padding: 0 20px;
+
+		@media (max-width: 620px) {
+			width: 100%;
+		}
+
+		h2 {
+			margin-top: 0;
+			color: $blue;
+			font-size: 28px;
+			@media (max-width: 620px) {
+				margin-top: 20px;
+			}
+		}
+		img {
+			width: 100%;
+		}
+		p {
+			font-size: 16px !important;
+			line-height: 24px !important;
+		}
+	}
+
+	&.-right {
+		._img {
+			@media (min-width: 621px) {
+				order: 1;
+			}
+		}
+	}
+}
+
+.momentum__news {
+
+	margin-bottom: 60px;
+
+	h2 {
+		color: $blue;
+		text-align: center;
+	}
+
+	._news {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media (max-width: 480px) {
+			display: block;
+		}
+
+		li {
+			width: calc(100%/3);
+			padding: 20px;
+			text-align: center;
+
+			@media (max-width: 480px) {
+				width: 100%;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			h3 {
+				color: $blue;
+				font-size: 20px;
+			}
+			._img {
+				width: 100%;
+				height: 175px;
+				overflow: hidden;
+				margin-bottom: 20px;
+				img {
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			&._brochure {
+				._img {
+					height: auto;
+					img {
+						object-fit: inherit;
+						height: auto;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.momentum__contacts {
+	padding: 0 20px;
+	h2 {
+		color: $blue;
+		text-align: center;
+	}
+	&__grid {
+		display: flex;
+		margin: 40px 0;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		@media (max-width: 620px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		._map {
+			width: 300px;
+			margin-bottom: 40px;
+			position: relative;
+		}
+		
+		._details {
+			width: 66%;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin: 0; 
+		list-style: none;
+		li {
+			width: 50%;
+			padding: 0 20px;
+			margin-bottom: 30px;
+
+			@media(max-width: 992px) {
+				width: 100%;
+			}
+
+			@media (max-width: 620px) {
+				padding: 0;
+				text-align: center;
+			}
+
+			._name {
+				font-size: 18px !important;
+				font-weight: bold;
+				color: $blue;
+			}
+
+			._address {
+				margin-top: 20px;
+			}
+
+			._position {
+				font-size: 13px;
+				margin-top: 5px;
+			}
+
+			._contacts {
+				margin: 10px 0 0 0;
+				@media (max-width: 620px) {
+					display: flex;
+					justify-content: center;
+				}
+				a {
+					display: flex;
+					text-decoration: none;
+					margin-top: 5px;
+
+					@media (max-width: 620px) {
+						justify-content: center;
+					}
+
+					._icon {
+						width: 22px;
+						margin-right: 10px;
+					}
+
+					._text {
+						color: rgba($black, .5);
+						font-size: 14px;
+						text-decoration: none;
+						@media (max-width: 620px) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__title {
+		padding: 20px;
+		font-size: 1.5rem;
+		color: $blue;
+		font-weight: bold;
+		margin-bottom: 20px;
+
+		@media (max-width: 620px) {
+			text-align: center;
+		}
+	}
+}
+
+.momentum__map__point {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 9%;
+    padding-top: 12%;
+	cursor: pointer;
+
+	&.--london {
+		top: 78%;
+    	left: 79%;
+	}
+	&.--liverpool {
+		top: 61%;
+    	left: 59%;
+	}
+
+	._title {
+		font-weight: bold;
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+
+	._address {
+		position: absolute;
+		bottom: 100%;
+		transform: translate(-50%, 5px);
+		left: 50%;
+		background: $white;
+		border-radius: 5px;
+		padding: 20px;
+		white-space: nowrap;
+		font-size: .9rem;
+		transition: all .2s ease-in-out;
+		opacity: 0;
+		visibility: hidden;
+		box-shadow: 0 5px 20px rgba($blue, .25);
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: calc(100% - 1px);
+			left: 50%;
+			transform: translate(-50%, -4px);
+			border-top: 10px solid $white;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+		}
+	}
+
+	&:hover {
+		._address {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(-50%, 0);
+		}
+	}
+}
+
+.momentun__btn {
+	display: inline-block;
+	border: 1px solid $black;
+	padding: 15px 35px;
+	border-radius: 35px;
+	text-decoration: none;
+	color: $red;
+	transition: all .2s ease-in-out;
+	font-size: 16px !important;
+
+	&:hover {
+		border-color: $red;
+		color: $red;
+		text-decoration: none;
+	}
+}
+
+.momentum__disclaimer {
+	margin: 0 0 40px 0;
+	padding: 0 20px;
+	&:before {
+		content: "";
+		width: 250px;
+		height: 1px;
+		display: block;
+		background: rgba($black, .1);
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 12px !important;
+		color: rgba($black, .35);
+		line-height: 15px !important;
+		a {
+			color: rgba($black, .35) !important;
+		}
+	}
+}
